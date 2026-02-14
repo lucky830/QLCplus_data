@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Workspace>
+<Workspace xmlns="http://www.qlcplus.org/Workspace" CurrentWindow="VC">
+ <Creator>
+  <Name>Q Light Controller Plus</Name>
+  <Version>5.1.0 GIT</Version>
+  <Author>Lucas Vonk</Author>
+ </Creator>
+ <Engine>
+  <InputOutputMap>
+   <BeatGenerator BeatType="Internal" BPM="120"/>
+   <Universe Name="Universe 1" ID="0">
+    <Output Plugin="ArtNet" UID="192.168.1.3" Line="1">
+     <PluginParameters outputIP="192.168.1.162" outputUni="1"/>
+    </Output>
+   </Universe>
+   <Universe Name="Universe 2" ID="1"/>
+   <Universe Name="Universe 3" ID="2"/>
+   <Universe Name="Universe 4" ID="3"/>
+  </InputOutputMap>
+  <Fixture>
+   <Manufacturer>Cosmos</Manufacturer>
+   <Model>FP1812 Flat Par Can</Model>
+   <Mode>10 channels</Mode>
+   <ID>0</ID>
+   <Name>FP1812 Flat Par Can [1]</Name>
+   <Universe>0</Universe>
+   <Address>0</Address>
+   <Channels>10</Channels>
+  </Fixture>
+  <FixtureGroup ID="0">
+   <Name>Pars</Name>
+   <Size X="1" Y="1"/>
+   <Head X="0" Y="0" Fixture="0">0</Head>
+  </FixtureGroup>
+  <Palette ID="0" Type="Dimmer" Name="50% dimmer" Value="127"/>
+  <Palette ID="1" Type="Dimmer" Name="100% dimmer" Value="255"/>
+  <Function ID="0" Type="Scene" Name="50% dimmer">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0"/>
+   <Palette ID="0"/>
+  </Function>
+  <Function ID="1" Type="Scene" Name="100% dimmer">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0"/>
+   <Palette ID="1"/>
+  </Function>
+  <Function ID="2" Type="Chaser" Name="dimmer change">
+   <Tempo>Beats</Tempo>
+   <Speed FadeIn="0" FadeOut="0" Duration="2000"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <SpeedModes FadeIn="Default" FadeOut="Default" Duration="Common"/>
+   <Step Number="0" FadeIn="0" Hold="2000" FadeOut="0">0</Step>
+   <Step Number="1" FadeIn="0" Hold="2000" FadeOut="0">1</Step>
+  </Function>
+  <Function ID="3" Type="Scene" Name="New Scene" Hidden="True">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+  </Function>
+  <Monitor DisplayMode="0" ShowLabels="0">
+   <Font>Arial,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1</Font>
+   <ChannelStyle>0</ChannelStyle>
+   <ValueStyle>0</ValueStyle>
+   <Grid Width="3" Height="1" Depth="1" Units="0" POV="1"/>
+   <StageItem>0</StageItem>
+   <FxItem ID="0" XPos="1336.87" YPos="161.935" ZPos="679.285" XRot="180"/>
+  </Monitor>
+ </Engine>
+ <VirtualConsole>
+  <Frame Caption="Page 1" ID="0">
+   <Appearance>
+    <Font>Roboto Condensed,16,-1,5,400,0,0,0,0,0,0,0,0,0,0,1</Font>
+   </Appearance>
+   <WindowState Visible="True" X="0" Y="0" Width="1920" Height="1080"/>
+   <AllowResize>False</AllowResize>
+   <ShowHeader>False</ShowHeader>
+   <ShowEnableButton>True</ShowEnableButton>
+   <Collapsed>False</Collapsed>
+   <Disabled>False</Disabled>
+   <AudioTriggers BarsNumber="16" Caption="Audio Trigger 1" ID="0">
+    <WindowState Visible="True" X="23" Y="351" Width="1143" Height="387"/>
+    <Appearance>
+     <Font>Roboto Condensed,29,-1,5,700,0,0,0,0,0,0,0,0,0,0,1</Font>
+    </Appearance>
+    <Bar Type="1" MinThreshold="51" MaxThreshold="204" Divisor="1" Index="1">
+     <DMXChannels>0,0</DMXChannels>
+    </Bar>
+   </AudioTriggers>
+  </Frame>
+  <Frame Caption="Page 2" ID="1">
+   <Appearance>
+    <Font>Roboto Condensed,16,-1,5,400,0,0,0,0,0,0,0,0,0,0,1</Font>
+   </Appearance>
+   <WindowState Visible="True" X="0" Y="0" Width="1920" Height="1080"/>
+   <AllowResize>False</AllowResize>
+   <ShowHeader>False</ShowHeader>
+   <ShowEnableButton>True</ShowEnableButton>
+   <Collapsed>False</Collapsed>
+   <Disabled>False</Disabled>
+  </Frame>
+  <Frame Caption="Page 3" ID="2">
+   <Appearance>
+    <Font>Roboto Condensed,16,-1,5,400,0,0,0,0,0,0,0,0,0,0,1</Font>
+   </Appearance>
+   <WindowState Visible="True" X="0" Y="0" Width="1920" Height="1080"/>
+   <AllowResize>False</AllowResize>
+   <ShowHeader>False</ShowHeader>
+   <ShowEnableButton>True</ShowEnableButton>
+   <Collapsed>False</Collapsed>
+   <Disabled>False</Disabled>
+  </Frame>
+  <Frame Caption="Page 4" ID="3">
+   <Appearance>
+    <Font>Roboto Condensed,16,-1,5,400,0,0,0,0,0,0,0,0,0,0,1</Font>
+   </Appearance>
+   <WindowState Visible="True" X="0" Y="0" Width="1920" Height="1080"/>
+   <AllowResize>False</AllowResize>
+   <ShowHeader>False</ShowHeader>
+   <ShowEnableButton>True</ShowEnableButton>
+   <Collapsed>False</Collapsed>
+   <Disabled>False</Disabled>
+  </Frame>
+ </VirtualConsole>
+</Workspace>

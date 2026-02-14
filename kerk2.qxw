@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Workspace>
+<Workspace xmlns="http://www.qlcplus.org/Workspace" CurrentWindow="VC">
+ <Creator>
+  <Name>Q Light Controller Plus</Name>
+  <Version>5.1.0</Version>
+  <Author>Lucas Vonk</Author>
+ </Creator>
+ <Engine>
+  <InputOutputMap>
+   <BeatGenerator BeatType="Internal" BPM="73"/>
+   <Universe Name="Universe 1" ID="0">
+    <Output Plugin="ArtNet" UID="10.50.1.24" Line="0">
+     <PluginParameters outputIP="10.50.1.100" outputUni="1" transmitMode="Full"/>
+    </Output>
+   </Universe>
+   <Universe Name="Universe 2" ID="1"/>
+   <Universe Name="Universe 3" ID="2"/>
+   <Universe Name="Universe 4" ID="3"/>
+  </InputOutputMap>
+  <Fixture>
+   <Manufacturer>Cosmos</Manufacturer>
+   <Model>FP1812 Flat Par Can</Model>
+   <Mode>10 channels</Mode>
+   <ID>0</ID>
+   <Name>FP1812 Flat Par Can [1]</Name>
+   <Universe>0</Universe>
+   <Address>24</Address>
+   <Channels>10</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>Cosmos</Manufacturer>
+   <Model>FP1812 Flat Par Can</Model>
+   <Mode>10 channels</Mode>
+   <ID>1</ID>
+   <Name>FP1812 Flat Par Can [2]</Name>
+   <Universe>0</Universe>
+   <Address>0</Address>
+   <Channels>10</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>Cosmos</Manufacturer>
+   <Model>FP1812 Flat Par Can</Model>
+   <Mode>10 channels</Mode>
+   <ID>2</ID>
+   <Name>FP1812 Flat Par Can [3]</Name>
+   <Universe>0</Universe>
+   <Address>35</Address>
+   <Channels>10</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>Cosmos</Manufacturer>
+   <Model>FP1812 Flat Par Can</Model>
+   <Mode>10 channels</Mode>
+   <ID>3</ID>
+   <Name>FP1812 Flat Par Can [4]</Name>
+   <Universe>0</Universe>
+   <Address>14</Address>
+   <Channels>10</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>beamZ</Manufacturer>
+   <Model>LCB183 v2</Model>
+   <Mode>7 Channels</Mode>
+   <ID>4</ID>
+   <Name>LCB183 Right [5]</Name>
+   <Universe>0</Universe>
+   <Address>76</Address>
+   <Channels>7</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>beamZ</Manufacturer>
+   <Model>LCB183 v2</Model>
+   <Mode>7 Channels</Mode>
+   <ID>5</ID>
+   <Name>LCB183 Left [6]</Name>
+   <Universe>0</Universe>
+   <Address>83</Address>
+   <Channels>7</Channels>
+  </Fixture>
+  <FixtureGroup ID="3">
+   <Name>All Pars</Name>
+   <Size X="4" Y="1"/>
+   <Head X="0" Y="0" Fixture="3">0</Head>
+   <Head X="1" Y="0" Fixture="2">0</Head>
+   <Head X="2" Y="0" Fixture="1">0</Head>
+   <Head X="3" Y="0" Fixture="0">0</Head>
+  </FixtureGroup>
+  <FixtureGroup ID="5">
+   <Name>Pars front</Name>
+   <Size X="2" Y="1"/>
+   <Head X="0" Y="0" Fixture="3">0</Head>
+   <Head X="1" Y="0" Fixture="0">0</Head>
+  </FixtureGroup>
+  <FixtureGroup ID="6">
+   <Name>Pars back</Name>
+   <Size X="2" Y="1"/>
+   <Head X="0" Y="0" Fixture="2">0</Head>
+   <Head X="1" Y="0" Fixture="1">0</Head>
+  </FixtureGroup>
+  <Palette ID="0" Type="Color" Name="Red" Value="#ff0000"/>
+  <Palette ID="1" Type="Color" Name="Orange" Value="#ff9900"/>
+  <Palette ID="2" Type="Color" Name="Yellow" Value="#ffff00"/>
+  <Palette ID="3" Type="Color" Name="Green" Value="#00ff00"/>
+  <Palette ID="4" Type="Color" Name="Cyan" Value="#00ffff"/>
+  <Palette ID="5" Type="Color" Name="Blue" Value="#0000ff"/>
+  <Palette ID="6" Type="Color" Name="Violet" Value="#9900ff"/>
+  <Palette ID="7" Type="Color" Name="Magenta" Value="#ff00ff"/>
+  <Function ID="0" Type="Scene" Name="All Dimmer 50%" Path="Dimmers">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">0,127</FixtureVal>
+   <FixtureVal ID="1">0,127</FixtureVal>
+   <FixtureVal ID="2">0,127</FixtureVal>
+   <FixtureVal ID="3">0,127</FixtureVal>
+   <FixtureVal ID="4">0,127</FixtureVal>
+   <FixtureVal ID="5">0,127</FixtureVal>
+  </Function>
+  <Function ID="1" Type="Scene" Name="All dimmer 75%" Path="Dimmers">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">0,0</FixtureVal>
+   <FixtureVal ID="1">0,0</FixtureVal>
+   <FixtureVal ID="2">0,0</FixtureVal>
+   <FixtureVal ID="3">0,0</FixtureVal>
+  </Function>
+  <Function ID="2" Type="Scene" Name="All dimmer 100%" Path="Dimmers">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">0,254,1,255,2,255,3,255,4,255,5,0,6,0,7,5,8,0,9,0</FixtureVal>
+   <FixtureVal ID="1">0,254,1,255,2,255,3,255,4,255,5,0,6,0,7,5,8,0,9,0</FixtureVal>
+   <FixtureVal ID="2">0,254,1,255,2,255,3,255,4,255,5,0,6,0,7,5,8,0,9,0</FixtureVal>
+   <FixtureVal ID="3">0,254,1,255,2,255,3,255,4,255,5,0,6,0,7,5,8,0,9,0</FixtureVal>
+   <FixtureVal ID="4">0,254,1,255,2,255,3,255,4,0,5,0,6,0</FixtureVal>
+   <FixtureVal ID="5">0,254,1,255,2,255,3,255,4,0,5,0,6,0</FixtureVal>
+  </Function>
+  <Function ID="3" Type="Scene" Name="Pars Right dimmer 50%" Path="Dimmers">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">0,127</FixtureVal>
+   <FixtureVal ID="1">0,127</FixtureVal>
+  </Function>
+  <Function ID="4" Type="Scene" Name="Pars Left 50%" Path="Dimmers">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="2">0,127</FixtureVal>
+   <FixtureVal ID="3">0,127</FixtureVal>
+  </Function>
+  <Function ID="5" Type="Scene" Name="Pars Right dimmer 100%" Path="Dimmers">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">0,254</FixtureVal>
+   <FixtureVal ID="1">0,254</FixtureVal>
+  </Function>
+  <Function ID="6" Type="Scene" Name="Pars Left dimmer 100%" Path="Dimmers">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="2">0,254</FixtureVal>
+   <FixtureVal ID="3">0,254</FixtureVal>
+  </Function>
+  <Function ID="7" Type="Scene" Name="Bars dimmer 50%" Path="Dimmers">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="4">0,127</FixtureVal>
+   <FixtureVal ID="5">0,127</FixtureVal>
+  </Function>
+  <Function ID="8" Type="Scene" Name="Bars dimmer 100%" Path="Dimmers">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="4">0,255</FixtureVal>
+   <FixtureVal ID="5">0,255</FixtureVal>
+  </Function>
+  <Function ID="9" Type="Scene" Name="RED">
+   <Speed FadeIn="3000" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="2">0,0,1,255,2,0,3,0,4,0,5,100,6,0,7,5</FixtureVal>
+   <FixtureVal ID="5">1,255,2,255,3,255</FixtureVal>
+   <FixtureVal ID="4">1,255,2,255,3,255</FixtureVal>
+   <FixtureVal ID="3">0,0,1,255,2,0,3,0,4,0,5,100,6,0,7,5</FixtureVal>
+   <FixtureVal ID="1">0,0,1,255,2,0,3,0,4,0,5,100,6,0,7,5</FixtureVal>
+   <FixtureVal ID="0">0,0,1,255,2,0,3,0,4,0,5,100,6,0,7,5</FixtureVal>
+   <Palette ID="0"/>
+  </Function>
+  <Function ID="10" Type="Scene" Name="New Scene 10">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0"/>
+   <FixtureVal ID="1"/>
+   <FixtureVal ID="2"/>
+   <FixtureVal ID="3"/>
+   <FixtureVal ID="4"/>
+   <FixtureVal ID="5"/>
+  </Function>
+  <Function ID="11" Type="Scene" Name="par 4 dim">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="3">0,153</FixtureVal>
+   <FixtureVal ID="1">0,255</FixtureVal>
+   <FixtureVal ID="0">0,255</FixtureVal>
+   <FixtureVal ID="2">0,255</FixtureVal>
+  </Function>
+  <Function ID="12" Type="Scene" Name="par 3 dim">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="2">0,153</FixtureVal>
+   <FixtureVal ID="1">0,255</FixtureVal>
+   <FixtureVal ID="3">0,255</FixtureVal>
+   <FixtureVal ID="0">0,255</FixtureVal>
+  </Function>
+  <Function ID="13" Type="Scene" Name="par 2 dim">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="1">0,153</FixtureVal>
+   <FixtureVal ID="3">0,255</FixtureVal>
+   <FixtureVal ID="0">0,255</FixtureVal>
+   <FixtureVal ID="2">0,255</FixtureVal>
+  </Function>
+  <Function ID="14" Type="Scene" Name="par 1 dim">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">0,153</FixtureVal>
+   <FixtureVal ID="3">0,255</FixtureVal>
+   <FixtureVal ID="1">0,255</FixtureVal>
+   <FixtureVal ID="2">0,255</FixtureVal>
+  </Function>
+  <Function ID="15" Type="Chaser" Name="left &gt; right dim">
+   <Speed FadeIn="100" FadeOut="0" Duration="200"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <SpeedModes FadeIn="Common" FadeOut="Default" Duration="Common"/>
+   <Step Number="0" FadeIn="100" Hold="100" FadeOut="0">11</Step>
+   <Step Number="1" FadeIn="100" Hold="100" FadeOut="0">12</Step>
+   <Step Number="2" FadeIn="100" Hold="100" FadeOut="0">13</Step>
+   <Step Number="3" FadeIn="100" Hold="100" FadeOut="0">14</Step>
+  </Function>
+  <Function ID="16" Type="Scene" Name="Purple / Blue">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">0,255,1,153,2,0,3,255,4,0,5,0,6,255,7,5,8,0,9,0</FixtureVal>
+   <FixtureVal ID="1">0,255,1,0,2,0,3,255,4,0,5,0,6,0,7,5,8,0,9,0</FixtureVal>
+   <FixtureVal ID="2">0,255,1,0,2,0,3,255,4,0,5,0,6,0,7,5,8,0,9,0</FixtureVal>
+   <FixtureVal ID="3">0,255,1,153,2,0,3,255,4,0,5,0,6,255,7,5,8,0,9,0</FixtureVal>
+   <FixtureVal ID="4">0,16,1,0,2,0,3,0,4,0,5,0,6,0</FixtureVal>
+   <FixtureVal ID="5">0,16,1,0,2,0,3,0,4,0,5,0,6,0</FixtureVal>
+  </Function>
+  <Function ID="17" Type="Scene" Name="Red">
+   <Speed FadeIn="3000" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">1,255,2,51,3,0,4,0,5,100,6,0,7,5,8,0,9,0</FixtureVal>
+   <FixtureVal ID="1">1,255,2,255,3,0,4,0,5,161,6,0,7,5,8,0,9,0</FixtureVal>
+   <FixtureVal ID="2">1,255,2,255,3,0,4,0,5,161,6,0,7,5,8,0,9,0</FixtureVal>
+   <FixtureVal ID="3">1,255,2,51,3,0,4,0,5,100,6,0,7,5,8,0,9,0</FixtureVal>
+   <FixtureVal ID="4">1,0,2,0,3,0,4,0,5,0,6,0</FixtureVal>
+   <FixtureVal ID="5">1,0,2,0,3,0,4,0,5,0,6,0</FixtureVal>
+  </Function>
+  <Function ID="18" Type="Collection" Name="par 1/3 dim">
+   <Step Number="0">14</Step>
+   <Step Number="1">12</Step>
+  </Function>
+  <Function ID="19" Type="Collection" Name="par 2/4 dim">
+   <Step Number="0">13</Step>
+   <Step Number="1">11</Step>
+  </Function>
+  <Function ID="20" Type="Chaser" Name="Even odd dim">
+   <Tempo>Beats</Tempo>
+   <Speed FadeIn="250" FadeOut="0" Duration="1000"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <SpeedModes FadeIn="Common" FadeOut="Default" Duration="Common"/>
+   <Step Number="0" FadeIn="250" Hold="750" FadeOut="0">19</Step>
+   <Step Number="1" FadeIn="250" Hold="750" FadeOut="0">18</Step>
+  </Function>
+  <Function ID="21" Type="Scene" Name="100%">
+   <Speed FadeIn="1500" FadeOut="1000" Duration="0"/>
+   <FixtureVal ID="0">0,255</FixtureVal>
+   <FixtureVal ID="1">0,255</FixtureVal>
+   <FixtureVal ID="2">0,255</FixtureVal>
+   <FixtureVal ID="3">0,255</FixtureVal>
+   <FixtureVal ID="4">0,182</FixtureVal>
+   <FixtureVal ID="5">0,182</FixtureVal>
+  </Function>
+  <Function ID="22" Type="Scene" Name="New Scene 22">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">0,255,1,255,2,51,3,0,4,0,5,100,6,0,7,5,8,0,9,0</FixtureVal>
+   <FixtureVal ID="1">0,255,1,255,2,255,3,0,4,0,5,161,6,0,7,5,8,0,9,0</FixtureVal>
+   <FixtureVal ID="2">0,255,1,255,2,255,3,0,4,0,5,161,6,0,7,5,8,0,9,0</FixtureVal>
+   <FixtureVal ID="3">0,255,1,255,2,51,3,0,4,0,5,100,6,0,7,5,8,0,9,0</FixtureVal>
+   <FixtureVal ID="4">0,182,1,0,2,0,3,0,4,0,5,0,6,0</FixtureVal>
+   <FixtureVal ID="5">0,182,1,0,2,0,3,0,4,0,5,0,6,0</FixtureVal>
+  </Function>
+  <Function ID="23" Type="Scene" Name="strobee">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="3">7,255</FixtureVal>
+   <FixtureVal ID="2">7,255</FixtureVal>
+   <FixtureVal ID="1">7,255</FixtureVal>
+   <FixtureVal ID="0">7,255</FixtureVal>
+  </Function>
+  <Function ID="24" Type="Scene" Name="New Scene 24">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="3">7,0</FixtureVal>
+   <FixtureVal ID="2">7,0</FixtureVal>
+   <FixtureVal ID="1">7,0</FixtureVal>
+   <FixtureVal ID="0">7,206</FixtureVal>
+  </Function>
+  <Monitor DisplayMode="0" ShowLabels="0">
+   <Font>Arial,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1</Font>
+   <ChannelStyle>0</ChannelStyle>
+   <ValueStyle>0</ValueStyle>
+   <Grid Width="9" Height="8" Depth="4" Units="0" POV="1"/>
+   <StageItem>0</StageItem>
+   <FxItem ID="0" XPos="7412" YPos="58" ZPos="1755" XRot="157" YRot="-145"/>
+   <FxItem ID="1" XPos="6300" YPos="100" ZPos="120" XRot="165" YRot="-25" ZRot="20"/>
+   <FxItem ID="2" XPos="2550" YPos="100" ZPos="150" XRot="165" YRot="25" ZRot="-20"/>
+   <FxItem ID="3" XPos="1560" YPos="100" ZPos="1912" XRot="155" YRot="152"/>
+   <FxItem ID="4" XPos="5150" YPos="100" ZPos="120" XRot="10"/>
+   <FxItem ID="5" XPos="2775" YPos="100" ZPos="120" XRot="10"/>
+   <MeshItem ID="1" XPos="-330" YPos="4100" ZPos="-595" YRot="45" XScale="1.6" YScale="5" Res="generic/cube.obj"/>
+   <MeshItem ID="2" XPos="7340" YPos="4100" ZPos="-595" YRot="-45" XScale="1.6" YScale="5" Res="generic/cube.obj"/>
+   <MeshItem ID="3" XPos="3500" YPos="4100" ZPos="-2000" XScale="2" YScale="5" Res="generic/cube.obj"/>
+   <MeshItem ID="4" XPos="3500" YPos="0" ZPos="-1470" XScale="0.5" ZScale="0.5" Res="generic/cube.obj"/>
+   <MeshItem ID="5" XPos="350" YPos="-775" ZPos="500" YRot="45" YScale="0.12" ZScale="0.2" Res="generic/cube.obj"/>
+  </Monitor>
+ </Engine>
+ <VirtualConsole>
+  <Frame Caption="Page 2" ID="1">
+   <Appearance>
+    <Font>Roboto Condensed,16,-1,5,400,0,0,0,0,0,0,0,0,0,0,1</Font>
+   </Appearance>
+   <WindowState Visible="True" X="0" Y="0" Width="1920" Height="1080"/>
+   <AllowResize>False</AllowResize>
+   <ShowHeader>False</ShowHeader>
+   <ShowEnableButton>True</ShowEnableButton>
+   <Collapsed>False</Collapsed>
+   <Disabled>False</Disabled>
+   <SoloFrame Caption="Solo Frame 2" ID="1">
+    <WindowState Visible="True" X="334" Y="545" Width="369" Height="387"/>
+    <AllowResize>True</AllowResize>
+    <ShowHeader>True</ShowHeader>
+    <ShowEnableButton>True</ShowEnableButton>
+    <Collapsed>False</Collapsed>
+    <Disabled>False</Disabled>
+    <Button Caption="L&gt;R dim" ID="0">
+     <WindowState Visible="True" X="123" Y="263" Width="87" Height="105"/>
+     <Appearance>
+      <BackgroundColor>4282664004</BackgroundColor>
+     </Appearance>
+     <Function ID="15"/>
+     <Action>Toggle</Action>
+     <Key>Z</Key>
+    </Button>
+    <Button Caption="All dimmer 100%" ID="2">
+     <WindowState Visible="True" X="17" Y="35" Width="99" Height="99"/>
+     <Appearance>
+      <BackgroundColor>4282664004</BackgroundColor>
+     </Appearance>
+     <Function ID="21"/>
+     <Action>Toggle</Action>
+     <Key>X</Key>
+    </Button>
+    <Button Caption="Even odd dim" ID="10">
+     <WindowState Visible="True" X="123" Y="140" Width="99" Height="99"/>
+     <Appearance>
+      <BackgroundColor>4282664004</BackgroundColor>
+     </Appearance>
+     <Function ID="20"/>
+     <Action>Toggle</Action>
+    </Button>
+    <Button Caption="All Dimmer 50%" ID="3">
+     <WindowState Visible="True" X="17" Y="140" Width="99" Height="99"/>
+     <Appearance>
+      <BackgroundColor>4282664004</BackgroundColor>
+     </Appearance>
+     <Function ID="0"/>
+     <Action>Toggle</Action>
+    </Button>
+    <Button Caption="All dimmer 75%" ID="4">
+     <WindowState Visible="True" X="123" Y="35" Width="99" Height="99"/>
+     <Appearance>
+      <BackgroundColor>4282664004</BackgroundColor>
+     </Appearance>
+     <Function ID="1"/>
+     <Action Override="1" ForceLTP="1">Flash</Action>
+    </Button>
+    <Slider Caption="Slider 6" ID="5" WidgetStyle="Slider" InvertedAppearance="false">
+     <WindowState Visible="True" X="281" Y="35" Width="87" Height="299"/>
+     <Appearance>
+      <BackgroundColor>4282664004</BackgroundColor>
+     </Appearance>
+     <SliderMode ValueDisplayStyle="Percentage">Submaster</SliderMode>
+     <Level LowLimit="0" HighLimit="255" Value="255"/>
+    </Slider>
+   </SoloFrame>
+   <CueList Caption="Even odd dim" ID="12">
+    <WindowState Visible="True" X="35" Y="334" Width="281" Height="281"/>
+    <Chaser>20</Chaser>
+   </CueList>
+   <CueList Caption="New Chaser 15" ID="6">
+    <WindowState Visible="True" X="879" Y="439" Width="469" Height="293"/>
+    <Chaser>15</Chaser>
+   </CueList>
+   <Button Caption="100%" ID="11">
+    <WindowState Visible="True" X="703" Y="475" Width="99" Height="99"/>
+    <Appearance>
+     <BackgroundColor>4282664004</BackgroundColor>
+    </Appearance>
+    <Function ID="21"/>
+    <Action>Toggle</Action>
+   </Button>
+   <Button Caption="strobee" ID="15">
+    <WindowState Visible="True" X="961" Y="175" Width="99" Height="99"/>
+    <Appearance>
+     <BackgroundColor>4282664004</BackgroundColor>
+    </Appearance>
+    <Function ID="23"/>
+    <Action Override="0" ForceLTP="0">Flash</Action>
+   </Button>
+   <SoloFrame Caption="Solo Frame 10" ID="9">
+    <WindowState Visible="True" X="439" Y="123" Width="293" Height="293"/>
+    <AllowResize>True</AllowResize>
+    <ShowHeader>True</ShowHeader>
+    <ShowEnableButton>True</ShowEnableButton>
+    <Collapsed>False</Collapsed>
+    <Disabled>False</Disabled>
+    <Button Caption="RED" ID="8">
+     <WindowState Visible="True" X="0" Y="52" Width="99" Height="99"/>
+     <Appearance>
+      <BackgroundColor>4282664004</BackgroundColor>
+     </Appearance>
+     <Function ID="17"/>
+     <Action>Toggle</Action>
+    </Button>
+    <Button Caption="New Scene 22" ID="13">
+     <WindowState Visible="True" X="70" Y="193" Width="99" Height="99"/>
+     <Appearance>
+      <BackgroundColor>4282664004</BackgroundColor>
+     </Appearance>
+     <Function ID="22"/>
+     <Action>Toggle</Action>
+    </Button>
+    <Button Caption="Purple / Blue" ID="7">
+     <WindowState Visible="True" X="105" Y="52" Width="99" Height="99"/>
+     <Appearance>
+      <BackgroundColor>4282664004</BackgroundColor>
+     </Appearance>
+     <Function ID="16"/>
+     <Action>Toggle</Action>
+    </Button>
+   </SoloFrame>
+  </Frame>
+  <Frame Caption="Page 3" ID="2">
+   <Appearance>
+    <Font>Roboto Condensed,16,-1,5,400,0,0,0,0,0,0,0,0,0,0,1</Font>
+   </Appearance>
+   <WindowState Visible="True" X="0" Y="0" Width="1920" Height="1080"/>
+   <AllowResize>False</AllowResize>
+   <ShowHeader>False</ShowHeader>
+   <ShowEnableButton>True</ShowEnableButton>
+   <Collapsed>False</Collapsed>
+   <Disabled>False</Disabled>
+  </Frame>
+  <Frame Caption="Page 4" ID="3">
+   <Appearance>
+    <Font>Roboto Condensed,16,-1,5,400,0,0,0,0,0,0,0,0,0,0,1</Font>
+   </Appearance>
+   <WindowState Visible="True" X="0" Y="0" Width="1920" Height="1080"/>
+   <AllowResize>False</AllowResize>
+   <ShowHeader>False</ShowHeader>
+   <ShowEnableButton>True</ShowEnableButton>
+   <Collapsed>False</Collapsed>
+   <Disabled>False</Disabled>
+  </Frame>
+ </VirtualConsole>
+</Workspace>

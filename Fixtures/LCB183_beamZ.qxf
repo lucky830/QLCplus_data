@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FixtureDefinition>
+<FixtureDefinition xmlns="http://www.qlcplus.org/FixtureDefinition">
+ <Creator>
+  <Name>Q Light Controller Plus</Name>
+  <Version>5.0.1</Version>
+  <Author>Lucas Vonk</Author>
+ </Creator>
+ <Manufacturer>beamZ</Manufacturer>
+ <Model>LCB183</Model>
+ <Type>LED Bar (Pixels)</Type>
+ <Channel Name="Red dimmer" Preset="IntensityRed"/>
+ <Channel Name="Green dimmer" Preset="IntensityGreen"/>
+ <Channel Name="Blue dimmer" Preset="IntensityBlue"/>
+ <Channel Name="Master dimmer" Preset="IntensityMasterDimmer"/>
+ <Channel Name="Strobe" Preset="ShutterStrobeSlowFast"/>
+ <Channel Name="Mode">
+  <Group Byte="0">Effect</Group>
+  <Capability Min="0" Max="9">No function</Capability>
+  <Capability Min="10" Max="249">Auto programs</Capability>
+  <Capability Min="250" Max="255">Sound programs</Capability>
+ </Channel>
+ <Channel Name="Speed">
+  <Group Byte="0">Speed</Group>
+  <Capability Min="0" Max="255">Speed of program</Capability>
+ </Channel>
+ <Channel Name="Red dimmer - segment 1" Preset="IntensityRed"/>
+ <Channel Name="Green dimmer - segment 1" Preset="IntensityGreen"/>
+ <Channel Name="Blue dimmer - segment 1" Preset="IntensityBlue"/>
+ <Channel Name="Red dimmer - segment 2" Preset="IntensityRed"/>
+ <Channel Name="Green dimmer - segment 2" Preset="IntensityGreen"/>
+ <Channel Name="Blue dimmer - segment 2" Preset="IntensityBlue"/>
+ <Channel Name="Red dimmer - segment 3" Preset="IntensityRed"/>
+ <Channel Name="Green dimmer - segment 3" Preset="IntensityGreen"/>
+ <Channel Name="Blue dimmer - segment 3" Preset="IntensityBlue"/>
+ <Channel Name="Empty" Preset="NoFunction"/>
+ <Mode Name="3 Channels">
+  <Channel Number="0">Red dimmer</Channel>
+  <Channel Number="1">Green dimmer</Channel>
+  <Channel Number="2">Blue dimmer</Channel>
+ </Mode>
+ <Mode Name="7 Channels">
+  <Channel Number="0">Master dimmer</Channel>
+  <Channel Number="1" ActsOn="0">Red dimmer</Channel>
+  <Channel Number="2" ActsOn="0">Green dimmer</Channel>
+  <Channel Number="3" ActsOn="0">Blue dimmer</Channel>
+  <Channel Number="4">Strobe</Channel>
+  <Channel Number="5">Mode</Channel>
+  <Channel Number="6">Speed</Channel>
+ </Mode>
+ <Mode Name="13 Channels">
+  <Channel Number="0">Red dimmer - segment 1</Channel>
+  <Channel Number="1">Green dimmer - segment 1</Channel>
+  <Channel Number="2">Blue dimmer - segment 1</Channel>
+  <Channel Number="3">Red dimmer - segment 2</Channel>
+  <Channel Number="4">Green dimmer - segment 2</Channel>
+  <Channel Number="5">Blue dimmer - segment 2</Channel>
+  <Channel Number="6">Red dimmer - segment 3</Channel>
+  <Channel Number="7">Green dimmer - segment 3</Channel>
+  <Channel Number="8">Blue dimmer - segment 3</Channel>
+  <Channel Number="9">Empty</Channel>
+  <Channel Number="10">Strobe</Channel>
+  <Channel Number="11">Mode</Channel>
+  <Channel Number="12">Speed</Channel>
+  <Head>
+   <Channel>0</Channel>
+   <Channel>1</Channel>
+   <Channel>2</Channel>
+   <Channel>3</Channel>
+   <Channel>4</Channel>
+   <Channel>5</Channel>
+   <Channel>6</Channel>
+   <Channel>7</Channel>
+   <Channel>8</Channel>
+   <Channel>9</Channel>
+   <Channel>10</Channel>
+   <Channel>11</Channel>
+   <Channel>12</Channel>
+  </Head>
+ </Mode>
+ <Physical>
+  <Bulb Type="LED" Lumens="270" ColourTemperature="0"/>
+  <Dimensions Weight="1.9" Width="65" Height="90" Depth="1090"/>
+  <Lens Name="Fresnel" DegreesMin="35" DegreesMax="35"/>
+  <Focus Type="Fixed" PanMax="0" TiltMax="0"/>
+  <Layout Width="1" Height="18"/>
+  <Technical PowerConsumption="54" DmxConnector="3-pin"/>
+ </Physical>
+</FixtureDefinition>

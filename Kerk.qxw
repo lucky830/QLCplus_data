@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Workspace>
+<Workspace xmlns="http://www.qlcplus.org/Workspace" CurrentWindow="FIXANDFUNC">
+ <Creator>
+  <Name>Q Light Controller Plus</Name>
+  <Version>5.1.0</Version>
+  <Author>Lucas Vonk</Author>
+ </Creator>
+ <Engine>
+  <InputOutputMap>
+   <BeatGenerator BeatType="Internal" BPM="120"/>
+   <Universe Name="Universe 1" ID="0">
+    <Output Plugin="ArtNet" UID="127.0.0.1" Line="1"/>
+    <Output Plugin="ArtNet" UID="10.50.1.24" Line="0">
+     <PluginParameters outputIP="10.10.1.48" outputUni="1"/>
+    </Output>
+   </Universe>
+   <Universe Name="Universe 2" ID="1"/>
+   <Universe Name="Universe 3" ID="2"/>
+   <Universe Name="Universe 4" ID="3"/>
+  </InputOutputMap>
+  <Fixture>
+   <Manufacturer>Cosmos</Manufacturer>
+   <Model>FP1812 Flat Par Can</Model>
+   <Mode>10 channels</Mode>
+   <ID>0</ID>
+   <Name>FP1812 Flat Par Can [1]</Name>
+   <Universe>0</Universe>
+   <Address>0</Address>
+   <Channels>10</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>Cosmos</Manufacturer>
+   <Model>FP1812 Flat Par Can</Model>
+   <Mode>10 channels</Mode>
+   <ID>1</ID>
+   <Name>FP1812 Flat Par Can [2]</Name>
+   <Universe>0</Universe>
+   <Address>10</Address>
+   <Channels>10</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>Cosmos</Manufacturer>
+   <Model>FP1812 Flat Par Can</Model>
+   <Mode>10 channels</Mode>
+   <ID>2</ID>
+   <Name>FP1812 Flat Par Can [3]</Name>
+   <Universe>0</Universe>
+   <Address>20</Address>
+   <Channels>10</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>Cosmos</Manufacturer>
+   <Model>FP1812 Flat Par Can</Model>
+   <Mode>10 channels</Mode>
+   <ID>3</ID>
+   <Name>FP1812 Flat Par Can [4]</Name>
+   <Universe>0</Universe>
+   <Address>30</Address>
+   <Channels>10</Channels>
+  </Fixture>
+  <FixtureGroup ID="0">
+   <Name>Pars</Name>
+   <Size X="4" Y="2"/>
+   <Head X="1" Y="0" Fixture="1">0</Head>
+   <Head X="2" Y="0" Fixture="2">0</Head>
+   <Head X="0" Y="1" Fixture="0">0</Head>
+   <Head X="3" Y="1" Fixture="3">0</Head>
+  </FixtureGroup>
+  <Palette ID="0" Type="Color" Name="good orange" Value="#ff5a00"/>
+  <Palette ID="1" Type="Color" Name="Proaten" Value="#f54600"/>
+  <Palette ID="2" Type="Color" Name="Goodness of god" Value="#8f0000"/>
+  <Palette ID="3" Type="Dimmer" Name="75 dimmer" Value="191.25"/>
+  <Palette ID="4" Type="Color" Name="Look up child" Value="#dc5a00"/>
+  <Palette ID="5" Type="Color" Name="Votum" Value="#0050ff"/>
+  <Palette ID="6" Type="Color" Name="U geeft rust" Value="#5a00a0"/>
+  <Palette ID="7" Type="Color" Name="Kracht van uw liefde" Value="#ff5000"/>
+  <Palette ID="8" Type="Color" Name="Meegaan" Value="#28ff00"/>
+  <Palette ID="9" Type="Color" Name="Oceans" Value="#0064ff"/>
+  <Palette ID="10" Type="Color" Name="Satified in you" Value="#ff0096"/>
+  <Palette ID="11" Type="Color" Name="Who you say I am (A)" Value="#64ff28"/>
+  <Palette ID="12" Type="Color" Name="Who you say I am (B)" Value="#0064ff"/>
+  <Palette ID="13" Type="Color" Name="God maakt vrij" Value="#c80000"/>
+  <Palette ID="14" Type="Color" Name="Praten" Value="#a00a00"/>
+  <Palette ID="15" Type="Dimmer" Name="100% dimmer" Value="255"/>
+  <Palette ID="16" Type="Dimmer" Name="50% dimmer" Value="128"/>
+  <Palette ID="17" Type="Dimmer" Name="75% dimmer" Value="0"/>
+  <Palette ID="18" Type="Dimmer" Name="25% dimmer" Value="63.74999999999999"/>
+  <Palette ID="19" Type="Dimmer" Name="0% dimmer" Value="0"/>
+  <Palette ID="20" Type="Color" Name="No Color" Value="#000000"/>
+  <Function ID="0" Type="Scene" Name="Proaten" Path="18jan - colors/18jan - colors">
+   <Speed FadeIn="3000" FadeOut="3000" Duration="0"/>
+   <FixtureVal ID="1">5,255,6,0</FixtureVal>
+   <FixtureVal ID="2">5,255,6,0</FixtureVal>
+   <FixtureVal ID="0">5,255,6,0</FixtureVal>
+   <FixtureVal ID="3">5,255</FixtureVal>
+   <FixtureGroup ID="0"/>
+   <Palette ID="1"/>
+  </Function>
+  <Function ID="1" Type="Scene" Name="dimmer 50">
+   <Speed FadeIn="2000" FadeOut="2000" Duration="0"/>
+   <FixtureVal ID="0">0,128</FixtureVal>
+   <FixtureVal ID="1">0,128</FixtureVal>
+   <FixtureVal ID="2">0,128</FixtureVal>
+   <FixtureVal ID="3">0,128</FixtureVal>
+   <FixtureGroup ID="0"/>
+   <Palette ID="16"/>
+  </Function>
+  <Function ID="2" Type="RGBMatrix" Name="New RGB Matrix 2">
+   <Speed FadeIn="0" FadeOut="0" Duration="200"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <Algorithm Type="Script">Lines</Algorithm>
+   <Color Index="0">4278190234</Color>
+   <ControlMode>RGB</ControlMode>
+   <FixtureGroup>0</FixtureGroup>
+   <Property Name="fadeMode" Value="Fade In"/>
+   <Property Name="linesBias" Value="Left"/>
+   <Property Name="linesRollover" Value="Yes"/>
+   <Property Name="linesSlide" Value="None"/>
+   <Property Name="linesType" Value="Horizontal"/>
+  </Function>
+  <Function ID="3" Type="Scene" Name="1- goodness of god" Path="18jan - colors/18jan - colors">
+   <Speed FadeIn="3000" FadeOut="3000" Duration="0"/>
+   <FixtureGroup ID="0"/>
+   <Palette ID="2"/>
+  </Function>
+  <Function ID="4" Type="Scene" Name="2- Look up child" Path="18jan - colors/18jan - colors">
+   <Speed FadeIn="3000" FadeOut="3000" Duration="0"/>
+   <FixtureGroup ID="0"/>
+   <Palette ID="4"/>
+  </Function>
+  <Function ID="5" Type="Scene" Name="3- Votum" Path="18jan - colors/18jan - colors">
+   <Speed FadeIn="3000" FadeOut="3000" Duration="0"/>
+   <FixtureGroup ID="0"/>
+   <Palette ID="5"/>
+  </Function>
+  <Function ID="6" Type="Scene" Name="4- U geeft rust" Path="18jan - colors/18jan - colors">
+   <Speed FadeIn="3000" FadeOut="3000" Duration="0"/>
+   <FixtureVal ID="1">5,0</FixtureVal>
+   <FixtureVal ID="2">5,0</FixtureVal>
+   <FixtureVal ID="0">5,0</FixtureVal>
+   <FixtureVal ID="3">5,0</FixtureVal>
+   <FixtureGroup ID="0"/>
+   <Palette ID="6"/>
+  </Function>
+  <Function ID="7" Type="Scene" Name="5- Kracht van uw liefde" Path="18jan - colors/18jan - colors">
+   <Speed FadeIn="3000" FadeOut="3000" Duration="0"/>
+   <FixtureVal ID="1">5,255,6,0</FixtureVal>
+   <FixtureVal ID="2">5,255,6,0</FixtureVal>
+   <FixtureVal ID="0">5,255,6,0</FixtureVal>
+   <FixtureVal ID="3">5,255</FixtureVal>
+   <FixtureGroup ID="0"/>
+   <Palette ID="7"/>
+  </Function>
+  <Function ID="8" Type="Scene" Name="6- meegaan" Path="18jan - colors/18jan - colors">
+   <Speed FadeIn="3000" FadeOut="3000" Duration="0"/>
+   <FixtureVal ID="1">5,0,6,0</FixtureVal>
+   <FixtureVal ID="2">5,0,6,0</FixtureVal>
+   <FixtureVal ID="0">5,0,6,0</FixtureVal>
+   <FixtureGroup ID="0"/>
+   <Palette ID="8"/>
+  </Function>
+  <Function ID="9" Type="Scene" Name="7- Oceans" Path="18jan - colors/18jan - colors">
+   <Speed FadeIn="3000" FadeOut="3000" Duration="0"/>
+   <FixtureVal ID="1">5,0,6,154</FixtureVal>
+   <FixtureVal ID="2">5,0,6,154</FixtureVal>
+   <FixtureVal ID="0">5,0,6,154</FixtureVal>
+   <FixtureVal ID="3">5,0,6,154</FixtureVal>
+   <FixtureGroup ID="0"/>
+   <Palette ID="9"/>
+  </Function>
+  <Function ID="10" Type="Scene" Name="8- Satified in you" Path="18jan - colors/18jan - colors">
+   <Speed FadeIn="3000" FadeOut="3000" Duration="0"/>
+   <FixtureVal ID="1">5,0,6,0</FixtureVal>
+   <FixtureVal ID="2">5,0,6,0</FixtureVal>
+   <FixtureVal ID="0">5,0,6,0</FixtureVal>
+   <FixtureGroup ID="0"/>
+   <Palette ID="10"/>
+  </Function>
+  <Function ID="11" Type="Scene" Name="9- Who you say I am (A)" Path="18jan - colors/18jan - colors">
+   <Speed FadeIn="3000" FadeOut="3000" Duration="0"/>
+   <FixtureGroup ID="0"/>
+   <Palette ID="11"/>
+  </Function>
+  <Function ID="12" Type="Scene" Name="9- Who you say I am (B)" Path="18jan - colors/18jan - colors">
+   <Speed FadeIn="3000" FadeOut="3000" Duration="0"/>
+   <FixtureGroup ID="0"/>
+   <Palette ID="12"/>
+  </Function>
+  <Function ID="13" Type="Scene" Name="10- God maakt vrij" Path="18jan - colors/18jan - colors">
+   <Speed FadeIn="3000" FadeOut="3000" Duration="0"/>
+   <FixtureGroup ID="0"/>
+   <Palette ID="13"/>
+  </Function>
+  <Function ID="14" Type="Scene" Name="Praten" Path="18jan - colors/18jan - colors">
+   <Speed FadeIn="1500" FadeOut="2000" Duration="0"/>
+   <FixtureGroup ID="0"/>
+   <Palette ID="1"/>
+  </Function>
+  <Function ID="15" Type="Scene" Name="100% dimmer" Path="Dimmer">
+   <Speed FadeIn="2000" FadeOut="2000" Duration="0"/>
+   <FixtureGroup ID="0"/>
+   <Palette ID="15"/>
+  </Function>
+  <Function ID="16" Type="Scene" Name="50% dimmer">
+   <Speed FadeIn="2000" FadeOut="2000" Duration="0"/>
+   <FixtureVal ID="1">0,255</FixtureVal>
+   <FixtureVal ID="2">0,255</FixtureVal>
+   <FixtureVal ID="0">0,255</FixtureVal>
+   <FixtureVal ID="3">0,255</FixtureVal>
+   <FixtureGroup ID="0"/>
+  </Function>
+  <Function ID="17" Type="Scene" Name="75% dimmer" Path="Dimmer">
+   <Speed FadeIn="2000" FadeOut="2000" Duration="0"/>
+   <FixtureGroup ID="0"/>
+   <Palette ID="3"/>
+  </Function>
+  <Function ID="18" Type="Scene" Name="25% dimmer" Path="Dimmer">
+   <Speed FadeIn="2000" FadeOut="2000" Duration="0"/>
+   <FixtureVal ID="0">0,64</FixtureVal>
+   <FixtureVal ID="1">0,64</FixtureVal>
+   <FixtureVal ID="2">0,64</FixtureVal>
+   <FixtureVal ID="3">0,64</FixtureVal>
+   <FixtureGroup ID="0"/>
+   <Palette ID="18"/>
+  </Function>
+  <Function ID="19" Type="Scene" Name="0% dimmer" Path="Dimmer">
+   <Speed FadeIn="2000" FadeOut="2000" Duration="0"/>
+   <FixtureGroup ID="0"/>
+   <Palette ID="19"/>
+  </Function>
+  <Function ID="20" Type="Scene" Name="No color">
+   <Speed FadeIn="3000" FadeOut="3000" Duration="0"/>
+   <FixtureGroup ID="0"/>
+   <Palette ID="20"/>
+  </Function>
+  <Function ID="21" Type="RGBMatrix" Name="New RGB Matrix 21" BlendMode="Subtractive">
+   <Speed FadeIn="0" FadeOut="0" Duration="500"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <Algorithm Type="Script">One By One</Algorithm>
+   <Color Index="0">4292598747</Color>
+   <ControlMode>Dimmer</ControlMode>
+   <FixtureGroup>0</FixtureGroup>
+  </Function>
+  <Function ID="22" Type="Scene" Name="1">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="1">0,166</FixtureVal>
+   <FixtureVal ID="0">0,166</FixtureVal>
+  </Function>
+  <Function ID="23" Type="Scene" Name="2">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="2">0,178</FixtureVal>
+   <FixtureVal ID="3">0,178</FixtureVal>
+  </Function>
+  <Function ID="24" Type="Chaser" Name="New Chaser 24">
+   <Speed FadeIn="0" FadeOut="0" Duration="1000"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <SpeedModes FadeIn="Default" FadeOut="Default" Duration="Common"/>
+   <Step Number="0" FadeIn="0" Hold="1000" FadeOut="0">22</Step>
+  </Function>
+  <Monitor DisplayMode="0" ShowLabels="0">
+   <Font>Arial,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1</Font>
+   <ChannelStyle>0</ChannelStyle>
+   <ValueStyle>0</ValueStyle>
+   <Grid Width="6" Height="5" Depth="2" Units="0" POV="1"/>
+   <StageItem>0</StageItem>
+   <FxItem ID="0" XPos="-2.36636" YPos="73.3075" ZPos="991.222" XRot="198"/>
+   <FxItem ID="1" XPos="1742.54" YPos="73.3075" ZPos="351.459" XRot="198"/>
+   <FxItem ID="2" XPos="3761.87" YPos="73.3075" ZPos="356.526" XRot="198"/>
+   <FxItem ID="3" XPos="5736.63" YPos="73.3075" ZPos="1001.86" XRot="198"/>
+  </Monitor>
+ </Engine>
+ <VirtualConsole>
+  <Frame Caption="Page 1" ID="0">
+   <Appearance>
+    <BackgroundColor>4278190080</BackgroundColor>
+    <Font>Roboto Condensed,16,-1,5,400,0,0,0,0,0,0,0,0,0,0,1</Font>
+   </Appearance>
+   <WindowState Visible="True" X="0" Y="0" Width="1920" Height="1080"/>
+   <AllowResize>False</AllowResize>
+   <ShowHeader>False</ShowHeader>
+   <ShowEnableButton>True</ShowEnableButton>
+   <Collapsed>False</Collapsed>
+   <Disabled>False</Disabled>
+   <SoloFrame Caption="Dimmer" ID="50">
+    <WindowState Visible="True" X="0" Y="0" Width="245" Height="282"/>
+    <AllowResize>True</AllowResize>
+    <ShowHeader>True</ShowHeader>
+    <ShowEnableButton>False</ShowEnableButton>
+    <Collapsed>False</Collapsed>
+    <Disabled>False</Disabled>
+    <Button Caption="25% dimmer" ID="52">
+     <WindowState Visible="True" X="81" Y="26" Width="81" Height="81"/>
+     <Appearance>
+      <BackgroundColor>4282992969</BackgroundColor>
+     </Appearance>
+     <Function ID="18"/>
+     <Action>Toggle</Action>
+    </Button>
+    <Button Caption="0% dimmer" ID="51">
+     <WindowState Visible="True" X="0" Y="26" Width="81" Height="81"/>
+     <Appearance>
+      <BackgroundColor>4278190080</BackgroundColor>
+     </Appearance>
+     <Function ID="19"/>
+     <Action>Toggle</Action>
+    </Button>
+    <Button Caption="Button 57" ID="56">
+     <WindowState Visible="True" X="331" Y="354" Width="75" Height="75"/>
+     <Appearance>
+      <BackgroundColor>4282664004</BackgroundColor>
+     </Appearance>
+     <Function ID="4294967295"/>
+     <Action>Toggle</Action>
+    </Button>
+    <Button Caption="75% dimmer" ID="54">
+     <WindowState Visible="True" X="0" Y="107" Width="81" Height="81"/>
+     <Appearance>
+      <BackgroundColor>4288059030</BackgroundColor>
+     </Appearance>
+     <Function ID="17"/>
+     <Action>Toggle</Action>
+    </Button>
+    <Button Caption="50% dimmer" ID="53">
+     <WindowState Visible="True" X="162" Y="26" Width="81" Height="81"/>
+     <Appearance>
+      <BackgroundColor>4284111450</BackgroundColor>
+     </Appearance>
+     <Function ID="1"/>
+     <Action>Toggle</Action>
+    </Button>
+    <Button Caption="100% dimmer" ID="55">
+     <WindowState Visible="True" X="81" Y="107" Width="81" Height="81"/>
+     <Appearance>
+      <ForegroundColor>4278190080</ForegroundColor>
+      <BackgroundColor>4294967295</BackgroundColor>
+     </Appearance>
+     <Function ID="15"/>
+     <Action>Toggle</Action>
+    </Button>
+   </SoloFrame>
+   <SoloFrame Caption="colors pars" ID="31">
+    <WindowState Visible="True" X="245" Y="0" Width="430" Height="282"/>
+    <AllowResize>True</AllowResize>
+    <ShowHeader>True</ShowHeader>
+    <ShowEnableButton>False</ShowEnableButton>
+    <Collapsed>False</Collapsed>
+    <Disabled>False</Disabled>
+    <Button Caption="4- U geeft rust" ID="36">
+     <WindowState Visible="True" X="344" Y="24" Width="86" Height="86"/>
+     <Appearance>
+      <BackgroundColor>4284088480</BackgroundColor>
+     </Appearance>
+     <Function ID="6"/>
+     <Action>Toggle</Action>
+    </Button>
+    <Button Caption="9- Who you say I am (B)" ID="42">
+     <WindowState Visible="True" X="0" Y="196" Width="86" Height="86"/>
+     <Appearance>
+      <BackgroundColor>4278413817</BackgroundColor>
+     </Appearance>
+     <Function ID="12"/>
+     <Action>Toggle</Action>
+    </Button>
+    <Button Caption="" ID="46">
+     <WindowState Visible="True" X="258" Y="196" Width="86" Height="86"/>
+     <Appearance>
+      <BackgroundColor>4282664004</BackgroundColor>
+     </Appearance>
+     <Function ID="4294967295"/>
+     <Action>Toggle</Action>
+    </Button>
+    <Button Caption="6 meegaan" ID="38">
+     <WindowState Visible="True" X="86" Y="110" Width="86" Height="86"/>
+     <Appearance>
+      <BackgroundColor>4280876800</BackgroundColor>
+     </Appearance>
+     <Function ID="8"/>
+     <Action>Toggle</Action>
+    </Button>
+    <Label Caption="19 jan ochtend" ID="58">
+     <WindowState Visible="True" X="344" Y="196" Width="86" Height="86"/>
+     <Appearance>
+      <Font>PT Mono,18,-1,5,700,0,0,0,0,0,0,0,0,0,0,1,Bold</Font>
+     </Appearance>
+    </Label>
+    <Button Caption="" ID="44">
+     <WindowState Visible="True" X="172" Y="196" Width="86" Height="86"/>
+     <Appearance>
+      <BackgroundColor>4282664004</BackgroundColor>
+     </Appearance>
+     <Function ID="4294967295"/>
+     <Action>Toggle</Action>
+    </Button>
+    <Button Caption="8- Satified in you" ID="40">
+     <WindowState Visible="True" X="258" Y="110" Width="86" Height="86"/>
+     <Appearance>
+      <BackgroundColor>4294901910</BackgroundColor>
+     </Appearance>
+     <Function ID="10"/>
+     <Action>Toggle</Action>
+    </Button>
+    <Button Caption="9- Who you say I am (A)" ID="41">
+     <WindowState Visible="True" X="344" Y="110" Width="86" Height="86"/>
+     <Appearance>
+      <BackgroundColor>4284809000</BackgroundColor>
+     </Appearance>
+     <Function ID="11"/>
+     <Action>Toggle</Action>
+    </Button>
+    <Button Caption="Praten" ID="43">
+     <WindowState Visible="True" X="86" Y="196" Width="86" Height="86"/>
+     <Appearance>
+      <BackgroundColor>4288678400</BackgroundColor>
+     </Appearance>
+     <Function ID="0"/>
+     <Action>Toggle</Action>
+    </Button>
+    <Button Caption="5- Kracht van uw liefde" ID="37">
+     <WindowState Visible="True" X="0" Y="110" Width="86" Height="86"/>
+     <Appearance>
+      <BackgroundColor>4294922240</BackgroundColor>
+     </Appearance>
+     <Function ID="7"/>
+     <Action>Toggle</Action>
+    </Button>
+    <Button Caption="7- Oceans" ID="39">
+     <WindowState Visible="True" X="172" Y="110" Width="86" Height="86"/>
+     <Appearance>
+      <BackgroundColor>4278348534</BackgroundColor>
+     </Appearance>
+     <Function ID="9"/>
+     <Action>Toggle</Action>
+    </Button>
+    <Button Caption="1- goodness of god" ID="33">
+     <WindowState Visible="True" X="86" Y="24" Width="86" Height="86"/>
+     <Appearance>
+      <BackgroundColor>4287561728</BackgroundColor>
+     </Appearance>
+     <Function ID="3"/>
+     <Action>Toggle</Action>
+    </Button>
+    <Button Caption="No color" ID="32">
+     <WindowState Visible="True" X="0" Y="24" Width="86" Height="86"/>
+     <Appearance>
+      <BackgroundColor>4278190080</BackgroundColor>
+     </Appearance>
+     <Function ID="20"/>
+     <Action>Toggle</Action>
+    </Button>
+    <Button Caption="3- Votum" ID="35">
+     <WindowState Visible="True" X="258" Y="24" Width="86" Height="86"/>
+     <Appearance>
+      <BackgroundColor>4278210815</BackgroundColor>
+     </Appearance>
+     <Function ID="5"/>
+     <Action>Toggle</Action>
+    </Button>
+    <Button Caption="2- Look up child" ID="34">
+     <WindowState Visible="True" X="172" Y="24" Width="86" Height="86"/>
+     <Appearance>
+      <BackgroundColor>4292631040</BackgroundColor>
+     </Appearance>
+     <Function ID="4"/>
+     <Action>Toggle</Action>
+    </Button>
+   </SoloFrame>
+   <Frame Caption="Frame 48" ID="47">
+    <WindowState Visible="True" X="0" Y="282" Width="103" Height="112"/>
+    <AllowResize>True</AllowResize>
+    <ShowHeader>False</ShowHeader>
+    <ShowEnableButton>False</ShowEnableButton>
+    <Collapsed>False</Collapsed>
+    <Disabled>False</Disabled>
+    <Button Caption="STOP" ID="49">
+     <WindowState Visible="True" X="0" Y="53" Width="101" Height="56"/>
+     <Appearance>
+      <BackgroundColor>4294901760</BackgroundColor>
+      <Font>PT Mono,24,-1,5,700,0,0,0,0,0,0,0,0,0,0,1,Bold</Font>
+     </Appearance>
+     <Function ID="4294967295"/>
+     <Action>StopAll</Action>
+    </Button>
+    <Button Caption="Blackout" ID="48">
+     <WindowState Visible="True" X="0" Y="0" Width="101" Height="56"/>
+     <Appearance>
+      <BackgroundColor>4278190080</BackgroundColor>
+      <Font>PT Mono,18,-1,5,700,0,0,0,0,0,0,0,0,0,0,1,Bold</Font>
+     </Appearance>
+     <Function ID="4294967295"/>
+     <Action>Blackout</Action>
+    </Button>
+   </Frame>
+  </Frame>
+  <Frame Caption="Page 2" ID="1">
+   <Appearance>
+    <Font>Roboto Condensed,16,-1,5,400,0,0,0,0,0,0,0,0,0,0,1</Font>
+   </Appearance>
+   <WindowState Visible="True" X="0" Y="0" Width="1920" Height="1080"/>
+   <AllowResize>False</AllowResize>
+   <ShowHeader>False</ShowHeader>
+   <ShowEnableButton>True</ShowEnableButton>
+   <Collapsed>False</Collapsed>
+   <Disabled>False</Disabled>
+  </Frame>
+  <Frame Caption="Page 3" ID="2">
+   <Appearance>
+    <Font>Roboto Condensed,16,-1,5,400,0,0,0,0,0,0,0,0,0,0,1</Font>
+   </Appearance>
+   <WindowState Visible="True" X="0" Y="0" Width="1920" Height="1080"/>
+   <AllowResize>False</AllowResize>
+   <ShowHeader>False</ShowHeader>
+   <ShowEnableButton>True</ShowEnableButton>
+   <Collapsed>False</Collapsed>
+   <Disabled>False</Disabled>
+  </Frame>
+  <Frame Caption="Page 4" ID="3">
+   <Appearance>
+    <Font>Roboto Condensed,16,-1,5,400,0,0,0,0,0,0,0,0,0,0,1</Font>
+   </Appearance>
+   <WindowState Visible="True" X="0" Y="0" Width="1920" Height="1080"/>
+   <AllowResize>False</AllowResize>
+   <ShowHeader>False</ShowHeader>
+   <ShowEnableButton>True</ShowEnableButton>
+   <Collapsed>False</Collapsed>
+   <Disabled>False</Disabled>
+  </Frame>
+ </VirtualConsole>
+</Workspace>

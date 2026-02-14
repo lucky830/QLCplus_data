@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FixtureDefinition>
+<FixtureDefinition xmlns="http://www.qlcplus.org/FixtureDefinition">
+ <Creator>
+  <Name>Q Light Controller Plus</Name>
+  <Version>5.0.1</Version>
+  <Author>LuckyGoose</Author>
+ </Creator>
+ <Manufacturer>PURElight</Manufacturer>
+ <Model>Mini Theater PAR 150 COB LED</Model>
+ <Type>Color Changer</Type>
+ <Channel Name="White Dimmer" Preset="IntensityDimmer"/>
+ <Channel Name="Master Dimmer" Preset="IntensityMasterDimmer"/>
+ <Channel Name="Strobe" Preset="ShutterStrobeSlowFast"/>
+ <Mode Name="1 channel">
+  <Channel Number="0">White Dimmer</Channel>
+ </Mode>
+ <Mode Name="3 channel">
+  <Channel Number="0">Master Dimmer</Channel>
+  <Channel Number="1">Strobe</Channel>
+  <Channel Number="2">White Dimmer</Channel>
+ </Mode>
+ <Physical>
+  <Bulb Type="LED" Lumens="0" ColourTemperature="0"/>
+  <Dimensions Weight="2.4" Width="140" Height="250" Depth="100"/>
+  <Lens Name="Other" DegreesMin="30" DegreesMax="30"/>
+  <Focus Type="Fixed" PanMax="0" TiltMax="0"/>
+  <Technical PowerConsumption="150" DmxConnector="3-pin"/>
+ </Physical>
+</FixtureDefinition>
