@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Workspace>
+<Workspace xmlns="http://www.qlcplus.org/Workspace" CurrentWindow="FIXANDFUNC">
+ <Creator>
+  <Name>Q Light Controller Plus</Name>
+  <Version>5.2.0</Version>
+  <Author>Lucas Vonk</Author>
+ </Creator>
+ <Engine>
+  <InputOutputMap>
+   <BeatGenerator BeatType="Disabled" BPM="120"/>
+   <Universe Name="Universe 1" ID="0">
+    <Output Plugin="ArtNet" UID="192.168.1.56" Line="1">
+     <PluginParameters outputIP="192.168.1.67" outputUni="1"/>
+    </Output>
+   </Universe>
+   <Universe Name="Universe 2" ID="1"/>
+   <Universe Name="Universe 3" ID="2"/>
+   <Universe Name="Universe 4" ID="3"/>
+  </InputOutputMap>
+  <Fixture>
+   <Manufacturer>Stairville</Manufacturer>
+   <Model>Quad Par Profile RGBW 5x8W</Model>
+   <Mode>6ch</Mode>
+   <ID>0</ID>
+   <Name>RGBW Par R_out</Name>
+   <Universe>0</Universe>
+   <Address>18</Address>
+   <Channels>6</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>Stairville</Manufacturer>
+   <Model>Quad Par Profile RGBW 5x8W</Model>
+   <Mode>6ch</Mode>
+   <ID>1</ID>
+   <Name>RGBW Par R_in</Name>
+   <Universe>0</Universe>
+   <Address>12</Address>
+   <Channels>6</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>Stairville</Manufacturer>
+   <Model>Quad Par Profile RGBW 5x8W</Model>
+   <Mode>6ch</Mode>
+   <ID>2</ID>
+   <Name>RGBW Par L_in</Name>
+   <Universe>0</Universe>
+   <Address>6</Address>
+   <Channels>6</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>Stairville</Manufacturer>
+   <Model>Quad Par Profile RGBW 5x8W</Model>
+   <Mode>6ch</Mode>
+   <ID>3</ID>
+   <Name>RGBW Par L_out</Name>
+   <Universe>0</Universe>
+   <Address>0</Address>
+   <Channels>6</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>PURElight </Manufacturer>
+   <Model>MUVY SpotOne 35W LED</Model>
+   <Mode>9 Channel</Mode>
+   <ID>4</ID>
+   <Name>Small Gobo R</Name>
+   <Universe>0</Universe>
+   <Address>129</Address>
+   <Channels>9</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>PURElight </Manufacturer>
+   <Model>MUVY SpotOne 35W LED</Model>
+   <Mode>9 Channel</Mode>
+   <ID>5</ID>
+   <Name>Small Gobo L</Name>
+   <Universe>0</Universe>
+   <Address>109</Address>
+   <Channels>9</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>PURElight</Manufacturer>
+   <Model>MUVY WashQ 7x10W RGBW LED</Model>
+   <Mode>9 channel</Mode>
+   <ID>6</ID>
+   <Name>RGBW Audience Head L</Name>
+   <Universe>0</Universe>
+   <Address>88</Address>
+   <Channels>9</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>PURElight</Manufacturer>
+   <Model>MUVY WashQ 7x10W RGBW LED</Model>
+   <Mode>9 channel</Mode>
+   <ID>7</ID>
+   <Name>RGBW Stage Head L_back </Name>
+   <Universe>0</Universe>
+   <Address>36</Address>
+   <Channels>9</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>PURElight</Manufacturer>
+   <Model>MUVY WashQ 7x10W RGBW LED</Model>
+   <Mode>9 channel</Mode>
+   <ID>8</ID>
+   <Name>RGBW Stage Head R_back</Name>
+   <Universe>0</Universe>
+   <Address>45</Address>
+   <Channels>9</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>PURElight</Manufacturer>
+   <Model>MUVY WashQ 7x10W RGBW LED</Model>
+   <Mode>9 channel</Mode>
+   <ID>9</ID>
+   <Name>RGBW Stage Head L_front</Name>
+   <Universe>0</Universe>
+   <Address>54</Address>
+   <Channels>9</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>PURElight</Manufacturer>
+   <Model>MUVY WashQ 7x10W RGBW LED</Model>
+   <Mode>9 channel</Mode>
+   <ID>10</ID>
+   <Name>RGBW Audience Head R</Name>
+   <Universe>0</Universe>
+   <Address>97</Address>
+   <Channels>9</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>PURElight</Manufacturer>
+   <Model>MUVY WashQ 7x10W RGBW LED</Model>
+   <Mode>9 channel</Mode>
+   <ID>11</ID>
+   <Name>RGBW Stage Head R_front</Name>
+   <Universe>0</Universe>
+   <Address>79</Address>
+   <Channels>9</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>PURElight</Manufacturer>
+   <Model>Mini Theater PAR 150 COB LED</Model>
+   <Mode>1 channel</Mode>
+   <ID>12</ID>
+   <Name>Flood Blinder R</Name>
+   <Universe>0</Universe>
+   <Address>106</Address>
+   <Channels>1</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>PURElight</Manufacturer>
+   <Model>Mini Theater PAR 150 COB LED</Model>
+   <Mode>1 channel</Mode>
+   <ID>13</ID>
+   <Name>Flood Blinder L</Name>
+   <Universe>0</Universe>
+   <Address>107</Address>
+   <Channels>1</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>Eurolite</Manufacturer>
+   <Model>TMH-155</Model>
+   <Mode>16bit</Mode>
+   <ID>14</ID>
+   <Name>Big Gobo</Name>
+   <Universe>0</Universe>
+   <Address>28</Address>
+   <Channels>8</Channels>
+  </Fixture>
+  <FixtureGroup ID="0">
+   <Name>Floods</Name>
+   <Size X="2" Y="1"/>
+   <Head X="0" Y="0" Fixture="12">0</Head>
+   <Head X="1" Y="0" Fixture="13">0</Head>
+  </FixtureGroup>
+  <FixtureGroup ID="1">
+   <Name>Moving heads</Name>
+   <Size X="9" Y="1"/>
+   <Head X="0" Y="0" Fixture="14">0</Head>
+   <Head X="1" Y="0" Fixture="11">0</Head>
+   <Head X="2" Y="0" Fixture="10">0</Head>
+   <Head X="3" Y="0" Fixture="9">0</Head>
+   <Head X="4" Y="0" Fixture="8">0</Head>
+   <Head X="5" Y="0" Fixture="7">0</Head>
+   <Head X="6" Y="0" Fixture="6">0</Head>
+   <Head X="7" Y="0" Fixture="5">0</Head>
+   <Head X="8" Y="0" Fixture="4">0</Head>
+  </FixtureGroup>
+  <FixtureGroup ID="2">
+   <Name>Pars</Name>
+   <Size X="4" Y="1"/>
+   <Head X="0" Y="0" Fixture="0">0</Head>
+   <Head X="1" Y="0" Fixture="1">0</Head>
+   <Head X="2" Y="0" Fixture="2">0</Head>
+   <Head X="3" Y="0" Fixture="3">0</Head>
+  </FixtureGroup>
+  <FixtureGroup ID="3">
+   <Name>RGBW heads</Name>
+   <Size X="6" Y="1"/>
+   <Head X="0" Y="0" Fixture="11">0</Head>
+   <Head X="1" Y="0" Fixture="7">0</Head>
+   <Head X="2" Y="0" Fixture="10">0</Head>
+   <Head X="3" Y="0" Fixture="9">0</Head>
+   <Head X="4" Y="0" Fixture="6">0</Head>
+   <Head X="5" Y="0" Fixture="8">0</Head>
+  </FixtureGroup>
+  <FixtureGroup ID="4">
+   <Name>Small Gobos</Name>
+   <Size X="2" Y="1"/>
+   <Head X="0" Y="0" Fixture="5">0</Head>
+   <Head X="1" Y="0" Fixture="4">0</Head>
+  </FixtureGroup>
+  <FixtureGroup ID="5">
+   <Name>Big Gobo</Name>
+   <Size X="1" Y="1"/>
+   <Head X="0" Y="0" Fixture="14">0</Head>
+  </FixtureGroup>
+  <FixtureGroup ID="6">
+   <Name>RGBW heads audience</Name>
+   <Size X="2" Y="1"/>
+   <Head X="0" Y="0" Fixture="6">0</Head>
+   <Head X="1" Y="0" Fixture="10">0</Head>
+  </FixtureGroup>
+  <FixtureGroup ID="7">
+   <Name>RGBW heads stage</Name>
+   <Size X="4" Y="1"/>
+   <Head X="0" Y="0" Fixture="7">0</Head>
+   <Head X="1" Y="0" Fixture="9">0</Head>
+   <Head X="2" Y="0" Fixture="11">0</Head>
+   <Head X="3" Y="0" Fixture="8">0</Head>
+  </FixtureGroup>
+  <Palette ID="0" Type="Dimmer" Name="50% light" Value="0"/>
+  <Palette ID="1" Type="Dimmer" Name="Full light" Value="0"/>
+  <Palette ID="2" Type="Color" Name="White color" Value="#ffffff"/>
+  <Palette ID="3" Type="Color" Name="Orange color" Value="#ff9900"/>
+  <Palette ID="4" Type="Color" Name="Purple color" Value="#5c009a"/>
+  <Palette ID="5" Type="Color" Name="dark red" Value="#560000"/>
+  <Palette ID="6" Type="Color" Name="dark orange" Value="#563300"/>
+  <Palette ID="7" Type="Color" Name="dark yellow" Value="#565600"/>
+  <Palette ID="8" Type="Color" Name="dark green" Value="#005600"/>
+  <Palette ID="9" Type="Color" Name="dark cyan" Value="#005656"/>
+  <Palette ID="10" Type="Color" Name="dark blue" Value="#000056"/>
+  <Palette ID="11" Type="Color" Name="dark violet" Value="#330056"/>
+  <Palette ID="12" Type="Color" Name="dark pink" Value="#560056"/>
+  <Palette ID="13" Type="Color" Name="Black (off)" Value="#000000"/>
+  <Function ID="0" Type="Scene" Name="Start">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">0,0,1,0,2,0,3,0,4,104,5,0</FixtureVal>
+   <FixtureVal ID="1">0,0,1,0,2,0,3,0,4,102,5,0</FixtureVal>
+   <FixtureVal ID="2">0,0,1,0,2,0,3,0,4,104,5,0</FixtureVal>
+   <FixtureVal ID="3">0,0,1,0,2,0,3,0,4,103,5,0</FixtureVal>
+   <FixtureVal ID="4">0,127,1,127,2,3,3,11,4,0,5,100,6,127,7,0,8,0</FixtureVal>
+   <FixtureVal ID="5">0,127,1,145,2,2,3,11,4,0,5,100,6,126,7,0,8,0</FixtureVal>
+   <FixtureVal ID="6">0,126,1,126,2,255,3,0,4,0,5,0,6,0,7,0,8,0</FixtureVal>
+   <FixtureVal ID="7">0,126,1,126,2,255,3,0,4,0,5,0,6,0,7,0,8,0</FixtureVal>
+   <FixtureVal ID="8">0,126,1,126,2,255,3,0,4,0,5,0,6,0,7,0,8,0</FixtureVal>
+   <FixtureVal ID="9">0,126,1,126,2,254,3,0,4,0,5,0,6,0,7,0,8,0</FixtureVal>
+   <FixtureVal ID="10">0,126,1,126,2,255,3,0,4,0,5,0,6,0,7,0,8,0</FixtureVal>
+   <FixtureVal ID="11">0,126,1,126,2,255,3,0,4,0,5,0,6,0,7,0,8,0</FixtureVal>
+   <FixtureVal ID="12">0,0</FixtureVal>
+   <FixtureVal ID="13">0,0</FixtureVal>
+   <FixtureVal ID="14">0,127,1,127,2,7,3,0,4,80,5,180,6,127,7,127</FixtureVal>
+   <Palette ID="13"/>
+  </Function>
+  <Function ID="1" Type="Scene" Name="Initialize">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">0,51,1,0,2,86,3,0,4,104,5,0</FixtureVal>
+   <FixtureVal ID="1">0,51,1,0,2,86,3,0,4,102,5,0</FixtureVal>
+   <FixtureVal ID="2">0,51,1,0,2,86,3,0,4,104,5,0</FixtureVal>
+   <FixtureVal ID="3">0,51,1,0,2,86,3,0,4,103,5,0</FixtureVal>
+   <FixtureVal ID="4">0,127,1,183,2,73,3,43,4,0,5,255,6,100,7,0,8,0</FixtureVal>
+   <FixtureVal ID="5">0,127,1,185,2,73,3,43,4,0,5,100,6,156,7,0,8,0</FixtureVal>
+   <FixtureVal ID="6">0,126,1,126,2,248,3,0,4,0,5,154,6,0,7,0,8,0</FixtureVal>
+   <FixtureVal ID="7">0,126,1,126,2,248,3,0,4,0,5,154,6,0,7,0,8,0</FixtureVal>
+   <FixtureVal ID="8">0,126,1,126,2,248,3,0,4,0,5,154,6,0,7,0,8,0</FixtureVal>
+   <FixtureVal ID="9">0,126,1,126,2,248,3,0,4,0,5,154,6,0,7,0,8,0</FixtureVal>
+   <FixtureVal ID="10">0,126,1,126,2,248,3,0,4,0,5,154,6,0,7,0,8,0</FixtureVal>
+   <FixtureVal ID="11">0,126,1,126,2,248,3,0,4,0,5,154,6,0,7,0,8,0</FixtureVal>
+   <FixtureVal ID="12">0,70</FixtureVal>
+   <FixtureVal ID="13">0,70</FixtureVal>
+   <FixtureVal ID="14">0,0,1,51,2,9,3,0,4,116,5,255,6,0,7,48</FixtureVal>
+  </Function>
+  <Function ID="2" Type="EFX" Name="rgb heads move">
+   <Fixture>
+    <ID>11</ID>
+    <Head>0</Head>
+    <Mode>0</Mode>
+    <Direction>Forward</Direction>
+    <StartOffset>0</StartOffset>
+   </Fixture>
+   <Fixture>
+    <ID>7</ID>
+    <Head>0</Head>
+    <Mode>0</Mode>
+    <Direction>Forward</Direction>
+    <StartOffset>0</StartOffset>
+   </Fixture>
+   <Fixture>
+    <ID>10</ID>
+    <Head>0</Head>
+    <Mode>0</Mode>
+    <Direction>Forward</Direction>
+    <StartOffset>0</StartOffset>
+   </Fixture>
+   <Fixture>
+    <ID>9</ID>
+    <Head>0</Head>
+    <Mode>0</Mode>
+    <Direction>Forward</Direction>
+    <StartOffset>0</StartOffset>
+   </Fixture>
+   <Fixture>
+    <ID>6</ID>
+    <Head>0</Head>
+    <Mode>0</Mode>
+    <Direction>Forward</Direction>
+    <StartOffset>0</StartOffset>
+   </Fixture>
+   <Fixture>
+    <ID>8</ID>
+    <Head>0</Head>
+    <Mode>0</Mode>
+    <Direction>Forward</Direction>
+    <StartOffset>0</StartOffset>
+   </Fixture>
+   <PropagationMode>Serial</PropagationMode>
+   <Speed FadeIn="0" FadeOut="0" Duration="20000"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <Algorithm>Diamond</Algorithm>
+   <Width>127</Width>
+   <Height>127</Height>
+   <Rotation>0</Rotation>
+   <StartOffset>0</StartOffset>
+   <IsRelative>0</IsRelative>
+   <Axis Name="X">
+    <Offset>127</Offset>
+    <Frequency>2</Frequency>
+    <Phase>90</Phase>
+   </Axis>
+   <Axis Name="Y">
+    <Offset>127</Offset>
+    <Frequency>3</Frequency>
+    <Phase>0</Phase>
+   </Axis>
+  </Function>
+  <Function ID="3" Type="Scene" Name="New Scene" Hidden="True">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+  </Function>
+  <Function ID="4" Type="Chaser" Name="color change">
+   <Speed FadeIn="200" FadeOut="0" Duration="2000"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <SpeedModes FadeIn="Common" FadeOut="Common" Duration="Common"/>
+   <Step Number="0" FadeIn="200" Hold="1800" FadeOut="0">5</Step>
+   <Step Number="1" FadeIn="200" Hold="1800" FadeOut="0">6</Step>
+   <Step Number="2" FadeIn="200" Hold="1800" FadeOut="0">7</Step>
+   <Step Number="3" FadeIn="200" Hold="1800" FadeOut="0">8</Step>
+   <Step Number="4" FadeIn="200" Hold="1800" FadeOut="0">10</Step>
+   <Step Number="5" FadeIn="200" Hold="1800" FadeOut="0">11</Step>
+   <Step Number="6" FadeIn="200" Hold="1800" FadeOut="0">12</Step>
+  </Function>
+  <Function ID="5" Type="Scene" Name="dark red" Path="colors (dark)">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="3"/>
+   <Palette ID="5"/>
+  </Function>
+  <Function ID="6" Type="Scene" Name="dark orange" Path="colors (dark)">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="3"/>
+   <Palette ID="6"/>
+  </Function>
+  <Function ID="7" Type="Scene" Name="dark yellow" Path="colors (dark)">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="3"/>
+   <Palette ID="7"/>
+  </Function>
+  <Function ID="8" Type="Scene" Name="dark green" Path="colors (dark)">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="3"/>
+   <Palette ID="8"/>
+  </Function>
+  <Function ID="9" Type="Scene" Name="dark cyan" Path="colors (dark)">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="3"/>
+   <Palette ID="9"/>
+  </Function>
+  <Function ID="10" Type="Scene" Name="dark blue" Path="colors (dark)">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="3"/>
+   <Palette ID="10"/>
+  </Function>
+  <Function ID="11" Type="Scene" Name="dark violet" Path="colors (dark)">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="3"/>
+   <Palette ID="11"/>
+  </Function>
+  <Function ID="12" Type="Scene" Name="dark pink" Path="colors (dark)">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="3"/>
+   <Palette ID="12"/>
+  </Function>
+  <Function ID="13" Type="Scene" Name="All Off">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">0,0,1,0,2,0,3,0,4,0,5,0</FixtureVal>
+   <FixtureVal ID="1">0,0,1,0,2,0,3,0,4,0,5,0</FixtureVal>
+   <FixtureVal ID="2">0,0,1,0,2,0,3,0,4,0,5,0</FixtureVal>
+   <FixtureVal ID="3">0,0,1,0,2,0,3,0,4,0,5,0</FixtureVal>
+   <FixtureVal ID="4">0,0,1,0,2,0,3,0,4,0,5,0,6,0,7,0,8,0</FixtureVal>
+   <FixtureVal ID="5">0,0,1,0,2,0,3,0,4,0,5,0,6,0,7,0,8,0</FixtureVal>
+   <FixtureVal ID="6">0,0,1,0,2,0,3,0,4,0,5,0,6,0,7,0,8,0</FixtureVal>
+   <FixtureVal ID="7">0,0,1,0,2,0,3,0,4,0,5,0,6,0,7,0,8,0</FixtureVal>
+   <FixtureVal ID="8">0,0,1,0,2,0,3,0,4,0,5,0,6,0,7,0,8,0</FixtureVal>
+   <FixtureVal ID="9">0,0,1,0,2,0,3,0,4,0,5,0,6,0,7,0,8,0</FixtureVal>
+   <FixtureVal ID="10">0,0,1,0,2,0,3,0,4,0,5,0,6,0,7,0,8,0</FixtureVal>
+   <FixtureVal ID="11">0,0,1,0,2,0,3,0,4,0,5,0,6,0,7,0,8,0</FixtureVal>
+   <FixtureVal ID="12">0,0</FixtureVal>
+   <FixtureVal ID="13">0,0</FixtureVal>
+   <FixtureVal ID="14">0,0,1,0,2,0,3,0,4,0,5,0,6,0,7,0</FixtureVal>
+   <Palette ID="13"/>
+  </Function>
+  <Function ID="15" Type="RGBMatrix" Name="slow strobing">
+   <Speed FadeIn="650" FadeOut="650" Duration="1350"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <Algorithm Type="Script">Even/Odd</Algorithm>
+   <Color Index="0">4289541119</Color>
+   <Color Index="1">4289541119</Color>
+   <ControlMode>RGB</ControlMode>
+   <FixtureGroup>2</FixtureGroup>
+  </Function>
+  <Monitor DisplayMode="0" ShowLabels="0">
+   <Font>Arial,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1</Font>
+   <ChannelStyle>0</ChannelStyle>
+   <ValueStyle>0</ValueStyle>
+   <Grid Width="8" Height="6" Depth="13" Units="0" POV="1"/>
+   <StageItem>0</StageItem>
+   <FxItem ID="0" XPos="5415.39" YPos="3466.22" ZPos="142.894" XRot="63"/>
+   <FxItem ID="1" XPos="4406.7" YPos="3466.22" ZPos="142.894" XRot="63"/>
+   <FxItem ID="2" XPos="3398.02" YPos="3466.22" ZPos="142.894" XRot="63"/>
+   <FxItem ID="3" XPos="2389.34" YPos="3466.22" ZPos="142.894" XRot="63"/>
+   <FxItem ID="4" XPos="4412.02" YPos="3348.6" ZPos="1938.93"/>
+   <FxItem ID="5" XPos="3400.74" YPos="3348.6" ZPos="1931.34"/>
+   <FxItem ID="6" XPos="937.251" YPos="3500" ZPos="3000"/>
+   <FxItem ID="7" XPos="2352.79" YPos="3540.56" ZPos="589.737"/>
+   <FxItem ID="8" XPos="5397.5" YPos="3540.56" ZPos="590.343"/>
+   <FxItem ID="9" XPos="2367.63" YPos="3540.56" ZPos="1353.77"/>
+   <FxItem ID="10" XPos="7000" YPos="3500" ZPos="3000"/>
+   <FxItem ID="11" XPos="5419.35" YPos="3540.56" ZPos="1353.77"/>
+   <FxItem ID="12" XPos="6387.51" YPos="3735.85" ZPos="3887.22" XRot="316" YRot="-11" ZRot="25"/>
+   <FxItem ID="13" XPos="1403.43" YPos="3735.85" ZPos="3887.22" XRot="315" YRot="11" ZRot="335"/>
+   <FxItem ID="14" XPos="3830.82" YPos="4549.17" ZPos="9830.02"/>
+   <MeshItem ID="0" XPos="-250" YPos="-1850" ZPos="700" Res="Stage.stl"/>
+   <MeshItem ID="1" XPos="0" YPos="-2600" ZPos="700" Res="roof.stl"/>
+   <MeshItem ID="2" XPos="3000" YPos="3940" ZPos="190" XScale="4" Res="generic/cube.obj"/>
+  </Monitor>
+ </Engine>
+ <VirtualConsole>
+  <Frame Caption="Page 1" ID="0">
+   <Appearance>
+    <Font>Roboto Condensed,16,-1,5,400,0,0,0,0,0,0,0,0,0,0,1</Font>
+   </Appearance>
+   <WindowState Visible="True" X="0" Y="0" Width="1920" Height="1080"/>
+   <AllowResize>False</AllowResize>
+   <ShowHeader>False</ShowHeader>
+   <ShowEnableButton>True</ShowEnableButton>
+   <Collapsed>False</Collapsed>
+   <Disabled>False</Disabled>
+   <Label Caption="Toggle start before starting above functions" ID="8">
+    <WindowState Visible="True" X="368" Y="344" Width="110" Height="61"/>
+   </Label>
+   <Label Caption="Cycling through colors of RGBW heads" ID="3">
+    <WindowState Visible="True" X="221" Y="270" Width="110" Height="49"/>
+   </Label>
+   <Label Caption="dynamic moving of the RGBW heads" ID="4">
+    <WindowState Visible="True" X="368" Y="270" Width="110" Height="49"/>
+   </Label>
+   <Label Caption="slow strobing of the pars" ID="5">
+    <WindowState Visible="True" X="504" Y="282" Width="102" Height="32"/>
+   </Label>
+   <Button Caption="Initialize" ID="6">
+    <WindowState Visible="True" X="603" Y="430" Width="69" Height="69"/>
+    <Appearance>
+     <BackgroundColor>4282664004</BackgroundColor>
+    </Appearance>
+    <Function ID="1"/>
+    <Action>Toggle</Action>
+   </Button>
+   <Button Caption="slow strobing" ID="2">
+    <WindowState Visible="True" X="517" Y="196" Width="69" Height="69"/>
+    <Appearance>
+     <BackgroundColor>4282664004</BackgroundColor>
+    </Appearance>
+    <Function ID="15"/>
+    <Action>Toggle</Action>
+   </Button>
+   <Button Caption="color change" ID="0">
+    <WindowState Visible="True" X="245" Y="196" Width="69" Height="69"/>
+    <Appearance>
+     <BackgroundColor>4282664004</BackgroundColor>
+    </Appearance>
+    <Function ID="4"/>
+    <Action>Toggle</Action>
+   </Button>
+   <Label Caption="just to test all lights" ID="9">
+    <WindowState Visible="True" X="591" Y="394" Width="98" Height="36"/>
+   </Label>
+   <Button Caption="Toggle Blackout" ID="13">
+    <WindowState Visible="True" X="334" Y="563" Width="123" Height="140"/>
+    <Appearance>
+     <BackgroundColor>4282664004</BackgroundColor>
+    </Appearance>
+    <Function ID="4294967295"/>
+    <Action>Blackout</Action>
+   </Button>
+   <Button Caption="All Off" ID="14">
+    <WindowState Visible="True" X="158" Y="422" Width="99" Height="99"/>
+    <Appearance>
+     <BackgroundColor>4282664004</BackgroundColor>
+    </Appearance>
+    <Function ID="13"/>
+    <Action>Toggle</Action>
+   </Button>
+   <Button Caption="rgb heads move" ID="1">
+    <WindowState Visible="True" X="394" Y="196" Width="69" Height="69"/>
+    <Appearance>
+     <BackgroundColor>4282664004</BackgroundColor>
+    </Appearance>
+    <Function ID="2"/>
+    <Action>Toggle</Action>
+   </Button>
+   <Button Caption="Stop all Functions" ID="12">
+    <WindowState Visible="True" X="179" Y="570" Width="113" Height="134"/>
+    <Appearance>
+     <BackgroundColor>4282664004</BackgroundColor>
+    </Appearance>
+    <Function ID="4294967295"/>
+    <Action>StopAll</Action>
+   </Button>
+   <Button Caption="Start" ID="7">
+    <WindowState Visible="True" X="381" Y="406" Width="98" Height="98"/>
+    <Appearance>
+     <BackgroundColor>4282664004</BackgroundColor>
+    </Appearance>
+    <Function ID="0"/>
+    <Action>Toggle</Action>
+   </Button>
+  </Frame>
+  <Frame Caption="Page 2" ID="1">
+   <Appearance>
+    <Font>Roboto Condensed,16,-1,5,400,0,0,0,0,0,0,0,0,0,0,1</Font>
+   </Appearance>
+   <WindowState Visible="True" X="0" Y="0" Width="1920" Height="1080"/>
+   <AllowResize>False</AllowResize>
+   <ShowHeader>False</ShowHeader>
+   <ShowEnableButton>True</ShowEnableButton>
+   <Collapsed>False</Collapsed>
+   <Disabled>False</Disabled>
+  </Frame>
+  <Frame Caption="Page 3" ID="2">
+   <Appearance>
+    <Font>Roboto Condensed,16,-1,5,400,0,0,0,0,0,0,0,0,0,0,1</Font>
+   </Appearance>
+   <WindowState Visible="True" X="0" Y="0" Width="1920" Height="1080"/>
+   <AllowResize>False</AllowResize>
+   <ShowHeader>False</ShowHeader>
+   <ShowEnableButton>True</ShowEnableButton>
+   <Collapsed>False</Collapsed>
+   <Disabled>False</Disabled>
+  </Frame>
+  <Frame Caption="Page 4" ID="3">
+   <Appearance>
+    <Font>Roboto Condensed,16,-1,5,400,0,0,0,0,0,0,0,0,0,0,1</Font>
+   </Appearance>
+   <WindowState Visible="True" X="0" Y="0" Width="1920" Height="1080"/>
+   <AllowResize>False</AllowResize>
+   <ShowHeader>False</ShowHeader>
+   <ShowEnableButton>True</ShowEnableButton>
+   <Collapsed>False</Collapsed>
+   <Disabled>False</Disabled>
+  </Frame>
+ </VirtualConsole>
+</Workspace>
