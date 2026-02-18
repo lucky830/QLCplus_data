@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Workspace>
-<Workspace xmlns="http://www.qlcplus.org/Workspace" CurrentWindow="FIXANDFUNC">
+<Workspace xmlns="http://www.qlcplus.org/Workspace" CurrentWindow="VC">
  <Creator>
   <Name>Q Light Controller Plus</Name>
   <Version>5.2.0</Version>
@@ -11,7 +11,7 @@
    <BeatGenerator BeatType="Disabled" BPM="120"/>
    <Universe Name="Universe 1" ID="0">
     <Output Plugin="ArtNet" UID="192.168.1.56" Line="1">
-     <PluginParameters outputIP="192.168.1.67" outputUni="1"/>
+     <PluginParameters outputIP="192.168.1.67" outputUni="1" transmitMode="Full"/>
     </Output>
    </Universe>
    <Universe Name="Universe 2" ID="1"/>
@@ -196,7 +196,7 @@
    <Head X="3" Y="0" Fixture="3">0</Head>
   </FixtureGroup>
   <FixtureGroup ID="3">
-   <Name>RGBW heads</Name>
+   <Name>RGBW washes</Name>
    <Size X="6" Y="1"/>
    <Head X="0" Y="0" Fixture="11">0</Head>
    <Head X="1" Y="0" Fixture="7">0</Head>
@@ -217,18 +217,49 @@
    <Head X="0" Y="0" Fixture="14">0</Head>
   </FixtureGroup>
   <FixtureGroup ID="6">
-   <Name>RGBW heads audience</Name>
+   <Name>RGBW washes audience</Name>
    <Size X="2" Y="1"/>
    <Head X="0" Y="0" Fixture="6">0</Head>
    <Head X="1" Y="0" Fixture="10">0</Head>
   </FixtureGroup>
   <FixtureGroup ID="7">
-   <Name>RGBW heads stage</Name>
+   <Name>RGBW washes stage</Name>
    <Size X="4" Y="1"/>
    <Head X="0" Y="0" Fixture="7">0</Head>
    <Head X="1" Y="0" Fixture="9">0</Head>
    <Head X="2" Y="0" Fixture="11">0</Head>
    <Head X="3" Y="0" Fixture="8">0</Head>
+  </FixtureGroup>
+  <FixtureGroup ID="8">
+   <Name>All lights</Name>
+   <Size X="7" Y="6"/>
+   <Head X="1" Y="0" Fixture="3">0</Head>
+   <Head X="2" Y="0" Fixture="2">0</Head>
+   <Head X="4" Y="0" Fixture="1">0</Head>
+   <Head X="5" Y="0" Fixture="0">0</Head>
+   <Head X="1" Y="1" Fixture="7">0</Head>
+   <Head X="5" Y="1" Fixture="8">0</Head>
+   <Head X="1" Y="2" Fixture="9">0</Head>
+   <Head X="5" Y="2" Fixture="11">0</Head>
+   <Head X="2" Y="3" Fixture="5">0</Head>
+   <Head X="4" Y="3" Fixture="4">0</Head>
+   <Head X="0" Y="4" Fixture="6">0</Head>
+   <Head X="6" Y="4" Fixture="10">0</Head>
+   <Head X="3" Y="5" Fixture="14">0</Head>
+  </FixtureGroup>
+  <FixtureGroup ID="9">
+   <Name>RGBW lights</Name>
+   <Size X="6" Y="4"/>
+   <Head X="1" Y="0" Fixture="3">0</Head>
+   <Head X="2" Y="0" Fixture="2">0</Head>
+   <Head X="3" Y="0" Fixture="1">0</Head>
+   <Head X="4" Y="0" Fixture="0">0</Head>
+   <Head X="1" Y="1" Fixture="7">0</Head>
+   <Head X="4" Y="1" Fixture="8">0</Head>
+   <Head X="1" Y="2" Fixture="9">0</Head>
+   <Head X="4" Y="2" Fixture="11">0</Head>
+   <Head X="0" Y="3" Fixture="6">0</Head>
+   <Head X="5" Y="3" Fixture="10">0</Head>
   </FixtureGroup>
   <Palette ID="0" Type="Dimmer" Name="50% light" Value="0"/>
   <Palette ID="1" Type="Dimmer" Name="Full light" Value="0"/>
@@ -244,191 +275,638 @@
   <Palette ID="11" Type="Color" Name="dark violet" Value="#330056"/>
   <Palette ID="12" Type="Color" Name="dark pink" Value="#560056"/>
   <Palette ID="13" Type="Color" Name="Black (off)" Value="#000000"/>
-  <Function ID="0" Type="Scene" Name="Start">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="0">0,0,1,0,2,0,3,0,4,104,5,0</FixtureVal>
-   <FixtureVal ID="1">0,0,1,0,2,0,3,0,4,102,5,0</FixtureVal>
-   <FixtureVal ID="2">0,0,1,0,2,0,3,0,4,104,5,0</FixtureVal>
-   <FixtureVal ID="3">0,0,1,0,2,0,3,0,4,103,5,0</FixtureVal>
-   <FixtureVal ID="4">0,127,1,127,2,3,3,11,4,0,5,100,6,127,7,0,8,0</FixtureVal>
-   <FixtureVal ID="5">0,127,1,145,2,2,3,11,4,0,5,100,6,126,7,0,8,0</FixtureVal>
-   <FixtureVal ID="6">0,126,1,126,2,255,3,0,4,0,5,0,6,0,7,0,8,0</FixtureVal>
-   <FixtureVal ID="7">0,126,1,126,2,255,3,0,4,0,5,0,6,0,7,0,8,0</FixtureVal>
-   <FixtureVal ID="8">0,126,1,126,2,255,3,0,4,0,5,0,6,0,7,0,8,0</FixtureVal>
-   <FixtureVal ID="9">0,126,1,126,2,254,3,0,4,0,5,0,6,0,7,0,8,0</FixtureVal>
-   <FixtureVal ID="10">0,126,1,126,2,255,3,0,4,0,5,0,6,0,7,0,8,0</FixtureVal>
-   <FixtureVal ID="11">0,126,1,126,2,255,3,0,4,0,5,0,6,0,7,0,8,0</FixtureVal>
-   <FixtureVal ID="12">0,0</FixtureVal>
-   <FixtureVal ID="13">0,0</FixtureVal>
-   <FixtureVal ID="14">0,127,1,127,2,7,3,0,4,80,5,180,6,127,7,127</FixtureVal>
-   <Palette ID="13"/>
+  <Palette ID="14" Type="Color" Name="Red" Value="#ff0000000000"/>
+  <Palette ID="15" Type="Color" Name="Orange" Value="#ff9900000000"/>
+  <Palette ID="16" Type="Color" Name="Yellow" Value="#ffff00000000"/>
+  <Palette ID="17" Type="Color" Name="Green" Value="#00ff00000000"/>
+  <Palette ID="18" Type="Color" Name="Cyan" Value="#00ffff000000"/>
+  <Palette ID="19" Type="Color" Name="Blue" Value="#0000ff000000"/>
+  <Palette ID="20" Type="Color" Name="Violet" Value="#9900ff000000"/>
+  <Palette ID="21" Type="Color" Name="Magenta" Value="#ff00ff000000"/>
+  <Palette ID="22" Type="Color" Name="white" Value="#000000ff0000"/>
+  <Palette ID="23" Type="Dimmer" Name="25% dimmer" Value="0"/>
+  <Palette ID="24" Type="Dimmer" Name="50% dimmer" Value="0"/>
+  <Palette ID="25" Type="Dimmer" Name="75% dimmer" Value="0"/>
+  <Palette ID="26" Type="Dimmer" Name="100% dimmer" Value="0"/>
+  <Palette ID="27" Type="Dimmer" Name="5% dimmer" Value="0"/>
+  <Palette ID="28" Type="Dimmer" Name="10% dimmer" Value="0"/>
+  <Palette ID="29" Type="Dimmer" Name="15% dimmer" Value="0"/>
+  <Palette ID="30" Type="Dimmer" Name="0% dimmer" Value="0"/>
+  <Function ID="0" Type="Scene" Name="All 100% dimmer" Path="Dimmers/All dimmers">
+   <Speed FadeIn="2000" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="3"/>
+   <FixtureVal ID="7">2,255</FixtureVal>
+   <FixtureVal ID="8">2,255</FixtureVal>
+   <FixtureVal ID="9">2,255</FixtureVal>
+   <FixtureVal ID="11">2,255</FixtureVal>
+   <FixtureVal ID="6">2,255</FixtureVal>
+   <FixtureVal ID="10">2,255</FixtureVal>
+   <FixtureGroup ID="8"/>
+   <Palette ID="26"/>
   </Function>
-  <Function ID="1" Type="Scene" Name="Initialize">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="0">0,51,1,0,2,86,3,0,4,104,5,0</FixtureVal>
-   <FixtureVal ID="1">0,51,1,0,2,86,3,0,4,102,5,0</FixtureVal>
-   <FixtureVal ID="2">0,51,1,0,2,86,3,0,4,104,5,0</FixtureVal>
-   <FixtureVal ID="3">0,51,1,0,2,86,3,0,4,103,5,0</FixtureVal>
-   <FixtureVal ID="4">0,127,1,183,2,73,3,43,4,0,5,255,6,100,7,0,8,0</FixtureVal>
-   <FixtureVal ID="5">0,127,1,185,2,73,3,43,4,0,5,100,6,156,7,0,8,0</FixtureVal>
-   <FixtureVal ID="6">0,126,1,126,2,248,3,0,4,0,5,154,6,0,7,0,8,0</FixtureVal>
-   <FixtureVal ID="7">0,126,1,126,2,248,3,0,4,0,5,154,6,0,7,0,8,0</FixtureVal>
-   <FixtureVal ID="8">0,126,1,126,2,248,3,0,4,0,5,154,6,0,7,0,8,0</FixtureVal>
-   <FixtureVal ID="9">0,126,1,126,2,248,3,0,4,0,5,154,6,0,7,0,8,0</FixtureVal>
-   <FixtureVal ID="10">0,126,1,126,2,248,3,0,4,0,5,154,6,0,7,0,8,0</FixtureVal>
-   <FixtureVal ID="11">0,126,1,126,2,248,3,0,4,0,5,154,6,0,7,0,8,0</FixtureVal>
-   <FixtureVal ID="12">0,70</FixtureVal>
-   <FixtureVal ID="13">0,70</FixtureVal>
-   <FixtureVal ID="14">0,0,1,51,2,9,3,0,4,116,5,255,6,0,7,48</FixtureVal>
+  <Function ID="1" Type="Scene" Name="All 75% dimmer" Path="Dimmers/All dimmers">
+   <Speed FadeIn="2000" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="7">2,103</FixtureVal>
+   <FixtureVal ID="8">2,103</FixtureVal>
+   <FixtureVal ID="9">2,103</FixtureVal>
+   <FixtureVal ID="11">2,103</FixtureVal>
+   <FixtureVal ID="6">2,103</FixtureVal>
+   <FixtureVal ID="10">2,103</FixtureVal>
+   <FixtureGroup ID="8"/>
+   <Palette ID="25"/>
   </Function>
-  <Function ID="2" Type="EFX" Name="rgb heads move">
-   <Fixture>
-    <ID>11</ID>
-    <Head>0</Head>
-    <Mode>0</Mode>
-    <Direction>Forward</Direction>
-    <StartOffset>0</StartOffset>
-   </Fixture>
-   <Fixture>
-    <ID>7</ID>
-    <Head>0</Head>
-    <Mode>0</Mode>
-    <Direction>Forward</Direction>
-    <StartOffset>0</StartOffset>
-   </Fixture>
-   <Fixture>
-    <ID>10</ID>
-    <Head>0</Head>
-    <Mode>0</Mode>
-    <Direction>Forward</Direction>
-    <StartOffset>0</StartOffset>
-   </Fixture>
-   <Fixture>
-    <ID>9</ID>
-    <Head>0</Head>
-    <Mode>0</Mode>
-    <Direction>Forward</Direction>
-    <StartOffset>0</StartOffset>
-   </Fixture>
-   <Fixture>
-    <ID>6</ID>
-    <Head>0</Head>
-    <Mode>0</Mode>
-    <Direction>Forward</Direction>
-    <StartOffset>0</StartOffset>
-   </Fixture>
-   <Fixture>
-    <ID>8</ID>
-    <Head>0</Head>
-    <Mode>0</Mode>
-    <Direction>Forward</Direction>
-    <StartOffset>0</StartOffset>
-   </Fixture>
-   <PropagationMode>Serial</PropagationMode>
-   <Speed FadeIn="0" FadeOut="0" Duration="20000"/>
-   <Direction>Forward</Direction>
-   <RunOrder>Loop</RunOrder>
-   <Algorithm>Diamond</Algorithm>
-   <Width>127</Width>
-   <Height>127</Height>
-   <Rotation>0</Rotation>
-   <StartOffset>0</StartOffset>
-   <IsRelative>0</IsRelative>
-   <Axis Name="X">
-    <Offset>127</Offset>
-    <Frequency>2</Frequency>
-    <Phase>90</Phase>
-   </Axis>
-   <Axis Name="Y">
-    <Offset>127</Offset>
-    <Frequency>3</Frequency>
-    <Phase>0</Phase>
-   </Axis>
+  <Function ID="2" Type="Scene" Name="All 50% dimmer" Path="Dimmers/All dimmers">
+   <Speed FadeIn="2000" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="7">2,71</FixtureVal>
+   <FixtureVal ID="8">2,71</FixtureVal>
+   <FixtureVal ID="9">2,71</FixtureVal>
+   <FixtureVal ID="11">2,71</FixtureVal>
+   <FixtureVal ID="6">2,71</FixtureVal>
+   <FixtureVal ID="10">2,71</FixtureVal>
+   <FixtureGroup ID="8"/>
+   <Palette ID="24"/>
   </Function>
   <Function ID="3" Type="Scene" Name="New Scene" Hidden="True">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
   </Function>
-  <Function ID="4" Type="Chaser" Name="color change">
-   <Speed FadeIn="200" FadeOut="0" Duration="2000"/>
-   <Direction>Forward</Direction>
-   <RunOrder>Loop</RunOrder>
-   <SpeedModes FadeIn="Common" FadeOut="Common" Duration="Common"/>
-   <Step Number="0" FadeIn="200" Hold="1800" FadeOut="0">5</Step>
-   <Step Number="1" FadeIn="200" Hold="1800" FadeOut="0">6</Step>
-   <Step Number="2" FadeIn="200" Hold="1800" FadeOut="0">7</Step>
-   <Step Number="3" FadeIn="200" Hold="1800" FadeOut="0">8</Step>
-   <Step Number="4" FadeIn="200" Hold="1800" FadeOut="0">10</Step>
-   <Step Number="5" FadeIn="200" Hold="1800" FadeOut="0">11</Step>
-   <Step Number="6" FadeIn="200" Hold="1800" FadeOut="0">12</Step>
+  <Function ID="4" Type="Scene" Name="All 25% dimmer" Path="Dimmers/All dimmers">
+   <Speed FadeIn="2000" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="7">2,40</FixtureVal>
+   <FixtureVal ID="8">2,40</FixtureVal>
+   <FixtureVal ID="9">2,40</FixtureVal>
+   <FixtureVal ID="11">2,40</FixtureVal>
+   <FixtureVal ID="6">2,40</FixtureVal>
+   <FixtureVal ID="10">2,40</FixtureVal>
+   <FixtureGroup ID="8"/>
+   <Palette ID="23"/>
   </Function>
-  <Function ID="5" Type="Scene" Name="dark red" Path="colors (dark)">
+  <Function ID="5" Type="Scene" Name="dark red" Path="Coloring/colors (dark)">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureGroup ID="3"/>
+   <FixtureGroup ID="2"/>
    <Palette ID="5"/>
   </Function>
-  <Function ID="6" Type="Scene" Name="dark orange" Path="colors (dark)">
+  <Function ID="6" Type="Scene" Name="dark orange" Path="Coloring/colors (dark)">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureGroup ID="3"/>
+   <FixtureGroup ID="2"/>
    <Palette ID="6"/>
   </Function>
-  <Function ID="7" Type="Scene" Name="dark yellow" Path="colors (dark)">
+  <Function ID="7" Type="Scene" Name="dark yellow" Path="Coloring/colors (dark)">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureGroup ID="3"/>
+   <FixtureGroup ID="2"/>
    <Palette ID="7"/>
   </Function>
-  <Function ID="8" Type="Scene" Name="dark green" Path="colors (dark)">
+  <Function ID="8" Type="Scene" Name="dark green" Path="Coloring/colors (dark)">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureGroup ID="3"/>
+   <FixtureGroup ID="2"/>
    <Palette ID="8"/>
   </Function>
-  <Function ID="9" Type="Scene" Name="dark cyan" Path="colors (dark)">
+  <Function ID="9" Type="Scene" Name="dark cyan" Path="Coloring/colors (dark)">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureGroup ID="3"/>
+   <FixtureGroup ID="2"/>
    <Palette ID="9"/>
   </Function>
-  <Function ID="10" Type="Scene" Name="dark blue" Path="colors (dark)">
+  <Function ID="10" Type="Scene" Name="dark blue" Path="Coloring/colors (dark)">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureGroup ID="3"/>
+   <FixtureGroup ID="2"/>
    <Palette ID="10"/>
   </Function>
-  <Function ID="11" Type="Scene" Name="dark violet" Path="colors (dark)">
+  <Function ID="11" Type="Scene" Name="dark violet" Path="Coloring/colors (dark)">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureGroup ID="3"/>
+   <FixtureGroup ID="2"/>
    <Palette ID="11"/>
   </Function>
-  <Function ID="12" Type="Scene" Name="dark pink" Path="colors (dark)">
+  <Function ID="12" Type="Scene" Name="dark pink" Path="Coloring/colors (dark)">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureGroup ID="3"/>
+   <FixtureGroup ID="2"/>
    <Palette ID="12"/>
   </Function>
-  <Function ID="13" Type="Scene" Name="All Off">
+  <Function ID="13" Type="Scene" Name="All 0% dimmer" Path="Dimmers/All dimmers">
+   <Speed FadeIn="2000" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="7">2,0</FixtureVal>
+   <FixtureVal ID="8">2,0</FixtureVal>
+   <FixtureVal ID="9">2,0</FixtureVal>
+   <FixtureVal ID="11">2,0</FixtureVal>
+   <FixtureVal ID="6">2,0</FixtureVal>
+   <FixtureVal ID="10">2,0</FixtureVal>
+   <FixtureVal ID="3">4,0</FixtureVal>
+   <FixtureGroup ID="8"/>
+   <Palette ID="30"/>
+  </Function>
+  <Function ID="14" Type="Scene" Name="Midden podium (gobos)" Path="Positions/Gobos">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="0">0,0,1,0,2,0,3,0,4,0,5,0</FixtureVal>
-   <FixtureVal ID="1">0,0,1,0,2,0,3,0,4,0,5,0</FixtureVal>
-   <FixtureVal ID="2">0,0,1,0,2,0,3,0,4,0,5,0</FixtureVal>
-   <FixtureVal ID="3">0,0,1,0,2,0,3,0,4,0,5,0</FixtureVal>
-   <FixtureVal ID="4">0,0,1,0,2,0,3,0,4,0,5,0,6,0,7,0,8,0</FixtureVal>
-   <FixtureVal ID="5">0,0,1,0,2,0,3,0,4,0,5,0,6,0,7,0,8,0</FixtureVal>
-   <FixtureVal ID="6">0,0,1,0,2,0,3,0,4,0,5,0,6,0,7,0,8,0</FixtureVal>
-   <FixtureVal ID="7">0,0,1,0,2,0,3,0,4,0,5,0,6,0,7,0,8,0</FixtureVal>
-   <FixtureVal ID="8">0,0,1,0,2,0,3,0,4,0,5,0,6,0,7,0,8,0</FixtureVal>
-   <FixtureVal ID="9">0,0,1,0,2,0,3,0,4,0,5,0,6,0,7,0,8,0</FixtureVal>
-   <FixtureVal ID="10">0,0,1,0,2,0,3,0,4,0,5,0,6,0,7,0,8,0</FixtureVal>
-   <FixtureVal ID="11">0,0,1,0,2,0,3,0,4,0,5,0,6,0,7,0,8,0</FixtureVal>
-   <FixtureVal ID="12">0,0</FixtureVal>
-   <FixtureVal ID="13">0,0</FixtureVal>
-   <FixtureVal ID="14">0,0,1,0,2,0,3,0,4,0,5,0,6,0,7,0</FixtureVal>
+   <FixtureVal ID="4">0,75,1,153,2,0,3,0,4,0,5,136,6,0,7,0,8,0</FixtureVal>
+   <FixtureVal ID="5">0,96,1,105,2,0,3,0,4,0,5,136,6,0,7,0,8,0</FixtureVal>
+  </Function>
+  <Function ID="15" Type="Scene" Name="Floods 5% dimmer" Path="Dimmers/Floods dimmers">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="0"/>
+   <Palette ID="27"/>
+  </Function>
+  <Function ID="16" Type="Scene" Name="Zijmuren (gobos)" Path="Positions/Gobos">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="4">0,110,1,214,2,0,3,0,4,0,5,136,6,0,7,0,8,0</FixtureVal>
+   <FixtureVal ID="5">0,60,1,41,2,0,3,0,4,0,5,136,6,0,7,0,8,0</FixtureVal>
+  </Function>
+  <Function ID="17" Type="Scene" Name="Default position (washes)" Path="Positions/Washes">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="6">0,131,1,88</FixtureVal>
+   <FixtureVal ID="10">0,132,1,155</FixtureVal>
+   <FixtureVal ID="7">0,127,1,127</FixtureVal>
+   <FixtureVal ID="8">0,127,1,127</FixtureVal>
+   <FixtureVal ID="9">0,127,1,127</FixtureVal>
+   <FixtureVal ID="11">0,127,1,127</FixtureVal>
+  </Function>
+  <Function ID="18" Type="Scene" Name="Full podium position (washes)" Path="Positions/Washes">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="6">0,109,1,47</FixtureVal>
+   <FixtureVal ID="10">0,148,1,204</FixtureVal>
+   <FixtureVal ID="7">0,127,1,127</FixtureVal>
+   <FixtureVal ID="8">0,127,1,127</FixtureVal>
+   <FixtureVal ID="9">0,127,1,127</FixtureVal>
+   <FixtureVal ID="11">0,127,1,127</FixtureVal>
+  </Function>
+  <Function ID="19" Type="Scene" Name="Floods 10% dimmer" Path="Dimmers/Floods dimmers">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="0"/>
+   <Palette ID="28"/>
+  </Function>
+  <Function ID="20" Type="Scene" Name="Floods 0% dimmer" Path="Dimmers/Floods dimmers">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="0"/>
+   <Palette ID="30"/>
+  </Function>
+  <Function ID="21" Type="Scene" Name="Floods 15% dimmer" Path="Dimmers/Floods dimmers">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="0"/>
+   <Palette ID="29"/>
+  </Function>
+  <Function ID="22" Type="Scene" Name="Floods 25% dimmer" Path="Dimmers/Floods dimmers">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="0"/>
+   <Palette ID="23"/>
+  </Function>
+  <Function ID="23" Type="Scene" Name="Pars - red" Path="Coloring/Pars colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="2"/>
+   <Palette ID="14"/>
+  </Function>
+  <Function ID="24" Type="Scene" Name="Pars - orange" Path="Coloring/Pars colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="2"/>
+   <Palette ID="15"/>
+  </Function>
+  <Function ID="25" Type="Scene" Name="Pars - yellow" Path="Coloring/Pars colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="2"/>
+   <Palette ID="16"/>
+  </Function>
+  <Function ID="26" Type="Scene" Name="Pars - green" Path="Coloring/Pars colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="2"/>
+   <Palette ID="17"/>
+  </Function>
+  <Function ID="27" Type="Scene" Name="Washes - magenta" Path="Coloring/Washes colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="3"/>
+   <Palette ID="21"/>
+  </Function>
+  <Function ID="28" Type="Scene" Name="Pars - cyan" Path="Coloring/Pars colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="2"/>
+   <Palette ID="18"/>
+  </Function>
+  <Function ID="29" Type="Scene" Name="Big gobo - white" Path="Coloring/Big gobo colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="14">2,7</FixtureVal>
+  </Function>
+  <Function ID="30" Type="Scene" Name="Pars - magenta" Path="Coloring/Pars colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="2"/>
+   <Palette ID="21"/>
+  </Function>
+  <Function ID="31" Type="Scene" Name="Pars - violet" Path="Coloring/Pars colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="2"/>
+   <Palette ID="20"/>
+  </Function>
+  <Function ID="32" Type="Scene" Name="Pars - blue" Path="Coloring/Pars colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="2"/>
+   <Palette ID="19"/>
+  </Function>
+  <Function ID="33" Type="Scene" Name="Washes - violet" Path="Coloring/Washes colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="3"/>
+   <Palette ID="20"/>
+  </Function>
+  <Function ID="34" Type="Scene" Name="Washes - blue" Path="Coloring/Washes colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="3"/>
+   <Palette ID="19"/>
+  </Function>
+  <Function ID="35" Type="Scene" Name="Washes - cyan" Path="Coloring/Washes colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="3"/>
+   <Palette ID="18"/>
+  </Function>
+  <Function ID="36" Type="Scene" Name="Washes - green" Path="Coloring/Washes colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="3"/>
+   <Palette ID="17"/>
+  </Function>
+  <Function ID="37" Type="Scene" Name="Washes - yellow" Path="Coloring/Washes colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="3"/>
+   <Palette ID="16"/>
+  </Function>
+  <Function ID="38" Type="Scene" Name="Washes - orange" Path="Coloring/Washes colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="3"/>
+   <Palette ID="15"/>
+  </Function>
+  <Function ID="39" Type="Scene" Name="Washes - red" Path="Coloring/Washes colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="3"/>
+   <Palette ID="14"/>
+  </Function>
+  <Function ID="40" Type="Scene" Name="Washes stage - red" Path="Coloring/Washes stage colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="7"/>
+   <Palette ID="14"/>
+  </Function>
+  <Function ID="41" Type="Scene" Name="Washes stage - yellow" Path="Coloring/Washes stage colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="7"/>
+   <Palette ID="16"/>
+  </Function>
+  <Function ID="42" Type="Scene" Name="Washes stage - orange" Path="Coloring/Washes stage colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="7"/>
+   <Palette ID="15"/>
+  </Function>
+  <Function ID="43" Type="Scene" Name="Washes stage - magenta" Path="Coloring/Washes stage colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="7"/>
+   <Palette ID="21"/>
+  </Function>
+  <Function ID="44" Type="Scene" Name="Washes stage - violet" Path="Coloring/Washes stage colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="7"/>
+   <Palette ID="20"/>
+  </Function>
+  <Function ID="45" Type="Scene" Name="Washes stage - blue" Path="Coloring/Washes stage colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="7"/>
+   <Palette ID="19"/>
+  </Function>
+  <Function ID="46" Type="Scene" Name="Washes stage - cyan" Path="Coloring/Washes stage colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="7"/>
+   <Palette ID="18"/>
+  </Function>
+  <Function ID="47" Type="Scene" Name="Washes stage - green" Path="Coloring/Washes stage colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="7"/>
+   <Palette ID="17"/>
+  </Function>
+  <Function ID="48" Type="Scene" Name="Washes audience - red" Path="Coloring/Washes audience colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="6"/>
+   <Palette ID="14"/>
+  </Function>
+  <Function ID="49" Type="Scene" Name="Washes audience - orange" Path="Coloring/Washes audience colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="6"/>
+   <Palette ID="15"/>
+  </Function>
+  <Function ID="50" Type="Scene" Name="Washes audience - yellow" Path="Coloring/Washes audience colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="6"/>
+   <Palette ID="16"/>
+  </Function>
+  <Function ID="51" Type="Scene" Name="Washes audience - green" Path="Coloring/Washes audience colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="6"/>
+   <Palette ID="17"/>
+  </Function>
+  <Function ID="52" Type="Scene" Name="Washes audience - black (off)" Path="Coloring/Washes audience colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="6"/>
    <Palette ID="13"/>
   </Function>
-  <Function ID="15" Type="RGBMatrix" Name="slow strobing">
-   <Speed FadeIn="650" FadeOut="650" Duration="1350"/>
-   <Direction>Forward</Direction>
-   <RunOrder>Loop</RunOrder>
-   <Algorithm Type="Script">Even/Odd</Algorithm>
-   <Color Index="0">4289541119</Color>
-   <Color Index="1">4289541119</Color>
-   <ControlMode>RGB</ControlMode>
-   <FixtureGroup>2</FixtureGroup>
+  <Function ID="53" Type="Scene" Name="Washes audience - magenta" Path="Coloring/Washes audience colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="6"/>
+   <Palette ID="21"/>
+  </Function>
+  <Function ID="54" Type="Scene" Name="Washes audience - violet" Path="Coloring/Washes audience colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="6"/>
+   <Palette ID="20"/>
+  </Function>
+  <Function ID="55" Type="Scene" Name="Washes audience - blue" Path="Coloring/Washes audience colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="6"/>
+   <Palette ID="19"/>
+  </Function>
+  <Function ID="56" Type="Scene" Name="Washes audience - cyan" Path="Coloring/Washes audience colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="6"/>
+   <Palette ID="18"/>
+  </Function>
+  <Function ID="57" Type="Scene" Name="Washes stage - black (off)" Path="Coloring/Washes stage colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="7"/>
+   <Palette ID="13"/>
+  </Function>
+  <Function ID="58" Type="Scene" Name="Washes - black (off)" Path="Coloring/Washes colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="3"/>
+   <Palette ID="13"/>
+  </Function>
+  <Function ID="59" Type="Scene" Name="Pars - black (off)" Path="Coloring/Pars colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="2"/>
+   <Palette ID="13"/>
+  </Function>
+  <Function ID="60" Type="Scene" Name="Gobos - white" Path="Coloring/Small gobos colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="5">2,4</FixtureVal>
+   <FixtureVal ID="4">2,4</FixtureVal>
+  </Function>
+  <Function ID="61" Type="Scene" Name="Gobos - red" Path="Coloring/Small gobos colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="5">2,14</FixtureVal>
+   <FixtureVal ID="4">2,14</FixtureVal>
+  </Function>
+  <Function ID="62" Type="Scene" Name="Gobos - yellow" Path="Coloring/Small gobos colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="5">2,24</FixtureVal>
+   <FixtureVal ID="4">2,24</FixtureVal>
+  </Function>
+  <Function ID="63" Type="Scene" Name="Gobos - blue" Path="Coloring/Small gobos colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="5">2,35</FixtureVal>
+   <FixtureVal ID="4">2,35</FixtureVal>
+  </Function>
+  <Function ID="64" Type="Scene" Name="Gobos - green" Path="Coloring/Small gobos colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="5">2,44</FixtureVal>
+   <FixtureVal ID="4">2,44</FixtureVal>
+  </Function>
+  <Function ID="65" Type="Scene" Name="Gobos - orange" Path="Coloring/Small gobos colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="5">2,54</FixtureVal>
+   <FixtureVal ID="4">2,54</FixtureVal>
+  </Function>
+  <Function ID="66" Type="Scene" Name="Gobos - pink" Path="Coloring/Small gobos colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="5">2,64</FixtureVal>
+   <FixtureVal ID="4">2,64</FixtureVal>
+  </Function>
+  <Function ID="67" Type="Scene" Name="Gobos - cyan" Path="Coloring/Small gobos colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="5">2,74</FixtureVal>
+   <FixtureVal ID="4">2,74</FixtureVal>
+  </Function>
+  <Function ID="68" Type="Scene" Name="Washes 0% dimmer" Path="Dimmers/Washes dimmers">
+   <Speed FadeIn="2000" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="7">2,0</FixtureVal>
+   <FixtureVal ID="8">2,0</FixtureVal>
+   <FixtureVal ID="9">2,0</FixtureVal>
+   <FixtureVal ID="11">2,0</FixtureVal>
+   <FixtureVal ID="6">2,0</FixtureVal>
+   <FixtureVal ID="10">2,0</FixtureVal>
+   <FixtureGroup ID="3"/>
+  </Function>
+  <Function ID="69" Type="Scene" Name="Big gobo - pink" Path="Coloring/Big gobo colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="14">2,23</FixtureVal>
+   <FixtureVal ID="4">2,0</FixtureVal>
+   <FixtureVal ID="5">2,22</FixtureVal>
+  </Function>
+  <Function ID="70" Type="Scene" Name="Big gobo - blue" Path="Coloring/Big gobo colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="14">2,39</FixtureVal>
+  </Function>
+  <Function ID="71" Type="Scene" Name="Big gobo - orange" Path="Coloring/Big gobo colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="14">2,56</FixtureVal>
+  </Function>
+  <Function ID="72" Type="Scene" Name="Big gobo - green" Path="Coloring/Big gobo colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="14">2,71</FixtureVal>
+  </Function>
+  <Function ID="73" Type="Scene" Name="Big gobo - violet" Path="Coloring/Big gobo colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="14">2,87</FixtureVal>
+  </Function>
+  <Function ID="74" Type="Scene" Name="Big gobo - yellow" Path="Coloring/Big gobo colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="14">2,104</FixtureVal>
+  </Function>
+  <Function ID="75" Type="Scene" Name="Big gobo - red" Path="Coloring/Big gobo colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="14">2,120</FixtureVal>
+  </Function>
+  <Function ID="76" Type="Scene" Name="Big gobo - rainbow slow" Path="Coloring/Big gobo colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="14">2,130</FixtureVal>
+  </Function>
+  <Function ID="77" Type="Scene" Name="Big gobo - rainbow med" Path="Coloring/Big gobo colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="14">2,192</FixtureVal>
+   <FixtureVal ID="4">2,0</FixtureVal>
+   <FixtureVal ID="5">2,22</FixtureVal>
+  </Function>
+  <Function ID="78" Type="Scene" Name="Big gobo - rainbow fast" Path="Coloring/Big gobo colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="14">2,252</FixtureVal>
+   <FixtureVal ID="4">2,252</FixtureVal>
+   <FixtureVal ID="5">2,252</FixtureVal>
+  </Function>
+  <Function ID="79" Type="Scene" Name="All RGBW lights - black (off)" Path="Coloring/All RGBW lights colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="9"/>
+   <Palette ID="13"/>
+  </Function>
+  <Function ID="80" Type="Scene" Name="All RGBW lights - white" Path="Coloring/All RGBW lights colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="9"/>
+   <Palette ID="22"/>
+  </Function>
+  <Function ID="81" Type="Scene" Name="All RGBW lights - magenta" Path="Coloring/All RGBW lights colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="9"/>
+   <Palette ID="21"/>
+  </Function>
+  <Function ID="82" Type="Scene" Name="All RGBW lights - violet" Path="Coloring/All RGBW lights colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="9"/>
+   <Palette ID="20"/>
+  </Function>
+  <Function ID="83" Type="Scene" Name="All RGBW lights - blue" Path="Coloring/All RGBW lights colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="9"/>
+   <Palette ID="19"/>
+  </Function>
+  <Function ID="84" Type="Scene" Name="All RGBW lights - cyan" Path="Coloring/All RGBW lights colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="9"/>
+   <Palette ID="18"/>
+  </Function>
+  <Function ID="85" Type="Scene" Name="All RGBW lights - green" Path="Coloring/All RGBW lights colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="9"/>
+   <Palette ID="17"/>
+  </Function>
+  <Function ID="86" Type="Scene" Name="All RGBW lights - yellow" Path="Coloring/All RGBW lights colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="9"/>
+   <Palette ID="16"/>
+  </Function>
+  <Function ID="87" Type="Scene" Name="All RGBW lights - orange" Path="Coloring/All RGBW lights colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="9"/>
+   <Palette ID="15"/>
+  </Function>
+  <Function ID="88" Type="Scene" Name="All RGBW lights - red" Path="Coloring/All RGBW lights colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="9"/>
+   <Palette ID="14"/>
+  </Function>
+  <Function ID="89" Type="Scene" Name="Washes 100% dimmer" Path="Dimmers/Washes dimmers">
+   <Speed FadeIn="2000" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="7">2,255</FixtureVal>
+   <FixtureVal ID="8">2,255</FixtureVal>
+   <FixtureVal ID="9">2,255</FixtureVal>
+   <FixtureVal ID="11">2,255</FixtureVal>
+   <FixtureVal ID="6">2,255</FixtureVal>
+   <FixtureVal ID="10">2,255</FixtureVal>
+   <FixtureGroup ID="3"/>
+  </Function>
+  <Function ID="90" Type="Scene" Name="Washes 25% dimmer" Path="Dimmers/Washes dimmers">
+   <Speed FadeIn="2000" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="7">2,40</FixtureVal>
+   <FixtureVal ID="8">2,40</FixtureVal>
+   <FixtureVal ID="9">2,40</FixtureVal>
+   <FixtureVal ID="11">2,40</FixtureVal>
+   <FixtureVal ID="6">2,40</FixtureVal>
+   <FixtureVal ID="10">2,40</FixtureVal>
+   <FixtureGroup ID="3"/>
+  </Function>
+  <Function ID="91" Type="Scene" Name="Washes 50% dimmer" Path="Dimmers/Washes dimmers">
+   <Speed FadeIn="2000" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="7">2,71</FixtureVal>
+   <FixtureVal ID="8">2,71</FixtureVal>
+   <FixtureVal ID="9">2,71</FixtureVal>
+   <FixtureVal ID="11">2,71</FixtureVal>
+   <FixtureVal ID="6">2,71</FixtureVal>
+   <FixtureVal ID="10">2,71</FixtureVal>
+   <FixtureGroup ID="3"/>
+  </Function>
+  <Function ID="92" Type="Scene" Name="Washes 75% dimmer" Path="Dimmers/Washes dimmers">
+   <Speed FadeIn="2000" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="7">2,103</FixtureVal>
+   <FixtureVal ID="8">2,103</FixtureVal>
+   <FixtureVal ID="9">2,103</FixtureVal>
+   <FixtureVal ID="11">2,103</FixtureVal>
+   <FixtureVal ID="6">2,103</FixtureVal>
+   <FixtureVal ID="10">2,103</FixtureVal>
+   <FixtureGroup ID="3"/>
+  </Function>
+  <Function ID="93" Type="Scene" Name="Pars - white" Path="Coloring/Pars colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="2"/>
+   <Palette ID="22"/>
+  </Function>
+  <Function ID="94" Type="Scene" Name="Pars 100% dimmer" Path="Dimmers/Pars dimmers">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="2"/>
+   <Palette ID="26"/>
+  </Function>
+  <Function ID="95" Type="Scene" Name="Pars 75% dimmer" Path="Dimmers/Pars dimmers">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="2"/>
+   <Palette ID="25"/>
+  </Function>
+  <Function ID="96" Type="Scene" Name="Pars 25% dimmer" Path="Dimmers/Pars dimmers">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="2"/>
+   <Palette ID="23"/>
+  </Function>
+  <Function ID="97" Type="Scene" Name="Pars 50% dimmer" Path="Dimmers/Pars dimmers">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="2"/>
+   <Palette ID="24"/>
+  </Function>
+  <Function ID="98" Type="Scene" Name="Pars 0% dimmer" Path="Dimmers/Pars dimmers">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="2"/>
+   <Palette ID="30"/>
+  </Function>
+  <Function ID="99" Type="Scene" Name="Washes - white" Path="Coloring/Washes colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="3"/>
+   <Palette ID="22"/>
+  </Function>
+  <Function ID="100" Type="Scene" Name="Gobos 0% dimmer" Path="Dimmers/Gobos dimmers">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="4"/>
+   <Palette ID="30"/>
+  </Function>
+  <Function ID="101" Type="Scene" Name="Gobos 100% dimmer" Path="Dimmers/Gobos dimmers">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="4"/>
+   <Palette ID="26"/>
+  </Function>
+  <Function ID="102" Type="Scene" Name="Gobos 25% dimmer" Path="Dimmers/Gobos dimmers">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="4"/>
+   <Palette ID="23"/>
+  </Function>
+  <Function ID="103" Type="Scene" Name="Gobos 50% dimmer" Path="Dimmers/Gobos dimmers">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="4"/>
+   <Palette ID="24"/>
+  </Function>
+  <Function ID="104" Type="Scene" Name="Gobos 75% dimmer" Path="Dimmers/Gobos dimmers">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="4"/>
+   <Palette ID="25"/>
+  </Function>
+  <Function ID="105" Type="Scene" Name="Big gobo 0% dimmer" Path="Dimmers/Big gobo dimmers">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="5"/>
+   <Palette ID="30"/>
+  </Function>
+  <Function ID="106" Type="Scene" Name="Big gobo 100% dimmer" Path="Dimmers/Big gobo dimmers">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="5"/>
+   <Palette ID="26"/>
+  </Function>
+  <Function ID="107" Type="Scene" Name="Big gobo 25% dimmer" Path="Dimmers/Big gobo dimmers">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="5"/>
+   <Palette ID="23"/>
+  </Function>
+  <Function ID="108" Type="Scene" Name="Big gobo 50% dimmer" Path="Dimmers/Big gobo dimmers">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="5"/>
+   <Palette ID="24"/>
+  </Function>
+  <Function ID="109" Type="Scene" Name="Big gobo 75% dimmer" Path="Dimmers/Big gobo dimmers">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="5"/>
+   <Palette ID="25"/>
   </Function>
   <Monitor DisplayMode="0" ShowLabels="0">
    <Font>Arial,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1</Font>
@@ -436,17 +914,17 @@
    <ValueStyle>0</ValueStyle>
    <Grid Width="8" Height="6" Depth="13" Units="0" POV="1"/>
    <StageItem>0</StageItem>
-   <FxItem ID="0" XPos="5415.39" YPos="3466.22" ZPos="142.894" XRot="63"/>
-   <FxItem ID="1" XPos="4406.7" YPos="3466.22" ZPos="142.894" XRot="63"/>
-   <FxItem ID="2" XPos="3398.02" YPos="3466.22" ZPos="142.894" XRot="63"/>
-   <FxItem ID="3" XPos="2389.34" YPos="3466.22" ZPos="142.894" XRot="63"/>
-   <FxItem ID="4" XPos="4412.02" YPos="3348.6" ZPos="1938.93"/>
-   <FxItem ID="5" XPos="3400.74" YPos="3348.6" ZPos="1931.34"/>
-   <FxItem ID="6" XPos="937.251" YPos="3500" ZPos="3000"/>
+   <FxItem ID="0" XPos="5415.39" YPos="3466.22" ZPos="142.894" XRot="28" YRot="-15"/>
+   <FxItem ID="1" XPos="4406.7" YPos="3466.22" ZPos="142.894" XRot="27" YRot="-5"/>
+   <FxItem ID="2" XPos="3398.02" YPos="3466.22" ZPos="142.894" XRot="27" YRot="5"/>
+   <FxItem ID="3" XPos="2389.34" YPos="3466.22" ZPos="142.894" XRot="28" YRot="15"/>
+   <FxItem ID="4" XPos="4412.02" YPos="3348.6" ZPos="1938.93" YRot="-20"/>
+   <FxItem ID="5" XPos="3400.74" YPos="3348.6" ZPos="1931.34" YRot="-161"/>
+   <FxItem ID="6" XPos="937.251" YPos="3500" ZPos="3000" XRot="-30" YRot="-180" ZRot="-20"/>
    <FxItem ID="7" XPos="2352.79" YPos="3540.56" ZPos="589.737"/>
    <FxItem ID="8" XPos="5397.5" YPos="3540.56" ZPos="590.343"/>
    <FxItem ID="9" XPos="2367.63" YPos="3540.56" ZPos="1353.77"/>
-   <FxItem ID="10" XPos="7000" YPos="3500" ZPos="3000"/>
+   <FxItem ID="10" XPos="7000" YPos="3500" ZPos="3000" XRot="-30" YRot="-180" ZRot="-20"/>
    <FxItem ID="11" XPos="5419.35" YPos="3540.56" ZPos="1353.77"/>
    <FxItem ID="12" XPos="6387.51" YPos="3735.85" ZPos="3887.22" XRot="316" YRot="-11" ZRot="25"/>
    <FxItem ID="13" XPos="1403.43" YPos="3735.85" ZPos="3887.22" XRot="315" YRot="11" ZRot="335"/>
@@ -467,85 +945,465 @@
    <ShowEnableButton>True</ShowEnableButton>
    <Collapsed>False</Collapsed>
    <Disabled>False</Disabled>
-   <Label Caption="Toggle start before starting above functions" ID="8">
-    <WindowState Visible="True" X="368" Y="344" Width="110" Height="61"/>
-   </Label>
-   <Label Caption="Cycling through colors of RGBW heads" ID="3">
-    <WindowState Visible="True" X="221" Y="270" Width="110" Height="49"/>
-   </Label>
-   <Label Caption="dynamic moving of the RGBW heads" ID="4">
-    <WindowState Visible="True" X="368" Y="270" Width="110" Height="49"/>
-   </Label>
-   <Label Caption="slow strobing of the pars" ID="5">
-    <WindowState Visible="True" X="504" Y="282" Width="102" Height="32"/>
-   </Label>
-   <Button Caption="Initialize" ID="6">
-    <WindowState Visible="True" X="603" Y="430" Width="69" Height="69"/>
-    <Appearance>
-     <BackgroundColor>4282664004</BackgroundColor>
-    </Appearance>
-    <Function ID="1"/>
-    <Action>Toggle</Action>
-   </Button>
-   <Button Caption="slow strobing" ID="2">
-    <WindowState Visible="True" X="517" Y="196" Width="69" Height="69"/>
-    <Appearance>
-     <BackgroundColor>4282664004</BackgroundColor>
-    </Appearance>
-    <Function ID="15"/>
-    <Action>Toggle</Action>
-   </Button>
-   <Button Caption="color change" ID="0">
-    <WindowState Visible="True" X="245" Y="196" Width="69" Height="69"/>
-    <Appearance>
-     <BackgroundColor>4282664004</BackgroundColor>
-    </Appearance>
-    <Function ID="4"/>
-    <Action>Toggle</Action>
-   </Button>
-   <Label Caption="just to test all lights" ID="9">
-    <WindowState Visible="True" X="591" Y="394" Width="98" Height="36"/>
-   </Label>
-   <Button Caption="Toggle Blackout" ID="13">
-    <WindowState Visible="True" X="334" Y="563" Width="123" Height="140"/>
-    <Appearance>
-     <BackgroundColor>4282664004</BackgroundColor>
-    </Appearance>
-    <Function ID="4294967295"/>
-    <Action>Blackout</Action>
-   </Button>
-   <Button Caption="All Off" ID="14">
-    <WindowState Visible="True" X="158" Y="422" Width="99" Height="99"/>
-    <Appearance>
-     <BackgroundColor>4282664004</BackgroundColor>
-    </Appearance>
-    <Function ID="13"/>
-    <Action>Toggle</Action>
-   </Button>
-   <Button Caption="rgb heads move" ID="1">
-    <WindowState Visible="True" X="394" Y="196" Width="69" Height="69"/>
-    <Appearance>
-     <BackgroundColor>4282664004</BackgroundColor>
-    </Appearance>
-    <Function ID="2"/>
-    <Action>Toggle</Action>
-   </Button>
-   <Button Caption="Stop all Functions" ID="12">
-    <WindowState Visible="True" X="179" Y="570" Width="113" Height="134"/>
-    <Appearance>
-     <BackgroundColor>4282664004</BackgroundColor>
-    </Appearance>
-    <Function ID="4294967295"/>
-    <Action>StopAll</Action>
-   </Button>
-   <Button Caption="Start" ID="7">
-    <WindowState Visible="True" X="381" Y="406" Width="98" Height="98"/>
-    <Appearance>
-     <BackgroundColor>4282664004</BackgroundColor>
-    </Appearance>
-    <Function ID="0"/>
-    <Action>Toggle</Action>
-   </Button>
+   <Frame Caption="colors" ID="21">
+    <WindowState Visible="True" X="17" Y="17" Width="1771" Height="501"/>
+    <AllowResize>True</AllowResize>
+    <ShowHeader>True</ShowHeader>
+    <ShowEnableButton>True</ShowEnableButton>
+    <Collapsed>False</Collapsed>
+    <Disabled>False</Disabled>
+    <Multipage PagesNum="1" CurrentPage="0" PagesLoop="True"/>
+    <Shortcut Page="0" Name="Page 1"/>
+    <SoloFrame Caption="Solo Frame 1" ID="0">
+     <WindowState Visible="True" X="107" Y="53" Width="787" Height="71"/>
+     <AllowResize>True</AllowResize>
+     <ShowHeader>False</ShowHeader>
+     <ShowEnableButton>False</ShowEnableButton>
+     <Collapsed>False</Collapsed>
+     <Disabled>False</Disabled>
+     <Button Caption="" ID="11">
+      <WindowState Visible="True" X="0" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4278190080</BackgroundColor>
+      </Appearance>
+      <Function ID="79"/>
+      <Action>Toggle</Action>
+     </Button>
+     <Button Caption="" ID="13">
+      <WindowState Visible="True" X="357" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4278255615</BackgroundColor>
+      </Appearance>
+      <Function ID="84"/>
+      <Action>Toggle</Action>
+     </Button>
+     <Button Caption="" ID="12">
+      <WindowState Visible="True" X="429" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4278190335</BackgroundColor>
+      </Appearance>
+      <Function ID="83"/>
+      <Action>Toggle</Action>
+     </Button>
+     <Button Caption="" ID="17">
+      <WindowState Visible="True" X="71" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4294901760</BackgroundColor>
+      </Appearance>
+      <Function ID="88"/>
+      <Action>Toggle</Action>
+     </Button>
+     <Button Caption="" ID="18">
+      <WindowState Visible="True" X="501" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4288217343</BackgroundColor>
+      </Appearance>
+      <Function ID="82"/>
+      <Action>Toggle</Action>
+     </Button>
+     <Button Caption="" ID="14">
+      <WindowState Visible="True" X="286" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4278255360</BackgroundColor>
+      </Appearance>
+      <Function ID="85"/>
+      <Action>Toggle</Action>
+     </Button>
+     <Button Caption="" ID="15">
+      <WindowState Visible="True" X="572" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4294902015</BackgroundColor>
+      </Appearance>
+      <Function ID="81"/>
+      <Action>Toggle</Action>
+     </Button>
+     <Button Caption="" ID="16">
+      <WindowState Visible="True" X="143" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4294940928</BackgroundColor>
+      </Appearance>
+      <Function ID="87"/>
+      <Action>Toggle</Action>
+     </Button>
+     <Button Caption="" ID="20">
+      <WindowState Visible="True" X="214" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4294967040</BackgroundColor>
+      </Appearance>
+      <Function ID="86"/>
+      <Action>Toggle</Action>
+     </Button>
+     <Button Caption="" ID="19">
+      <WindowState Visible="True" X="644" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4294967295</BackgroundColor>
+      </Appearance>
+      <Function ID="80"/>
+      <Action>Toggle</Action>
+     </Button>
+    </SoloFrame>
+    <SoloFrame Caption="Solo Frame 1" ID="23">
+     <WindowState Visible="True" X="107" Y="143" Width="787" Height="71"/>
+     <AllowResize>True</AllowResize>
+     <ShowHeader>False</ShowHeader>
+     <ShowEnableButton>False</ShowEnableButton>
+     <Collapsed>False</Collapsed>
+     <Disabled>False</Disabled>
+     <Button Caption="" ID="3">
+      <WindowState Visible="True" X="357" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4278255615</BackgroundColor>
+      </Appearance>
+      <Function ID="28"/>
+      <Action>Toggle</Action>
+     </Button>
+     <Button Caption="" ID="4">
+      <WindowState Visible="True" X="429" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4278190335</BackgroundColor>
+      </Appearance>
+      <Function ID="32"/>
+      <Action>Toggle</Action>
+     </Button>
+     <Button Caption="" ID="5">
+      <WindowState Visible="True" X="501" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4288217343</BackgroundColor>
+      </Appearance>
+      <Function ID="31"/>
+      <Action>Toggle</Action>
+     </Button>
+     <Button Caption="" ID="8">
+      <WindowState Visible="True" X="143" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4294940928</BackgroundColor>
+      </Appearance>
+      <Function ID="24"/>
+      <Action>Toggle</Action>
+     </Button>
+     <Button Caption="" ID="6">
+      <WindowState Visible="True" X="286" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4278255360</BackgroundColor>
+      </Appearance>
+      <Function ID="26"/>
+      <Action>Toggle</Action>
+     </Button>
+     <Button Caption="" ID="9">
+      <WindowState Visible="True" X="214" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4294967040</BackgroundColor>
+      </Appearance>
+      <Function ID="25"/>
+      <Action>Toggle</Action>
+     </Button>
+     <Button Caption="" ID="22">
+      <WindowState Visible="True" X="71" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4294901760</BackgroundColor>
+      </Appearance>
+      <Function ID="23"/>
+      <Action>Toggle</Action>
+     </Button>
+     <Button Caption="" ID="7">
+      <WindowState Visible="True" X="572" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4294902015</BackgroundColor>
+      </Appearance>
+      <Function ID="30"/>
+      <Action>Toggle</Action>
+     </Button>
+     <Button Caption="" ID="10">
+      <WindowState Visible="True" X="644" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4294967295</BackgroundColor>
+      </Appearance>
+      <Function ID="93"/>
+      <Action>Toggle</Action>
+     </Button>
+     <Button Caption="" ID="2">
+      <WindowState Visible="True" X="0" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4278190080</BackgroundColor>
+      </Appearance>
+      <Function ID="59"/>
+      <Action>Toggle</Action>
+     </Button>
+    </SoloFrame>
+    <SoloFrame Caption="Solo Frame 1" ID="58">
+     <WindowState Visible="True" X="107" Y="357" Width="787" Height="71"/>
+     <AllowResize>True</AllowResize>
+     <ShowHeader>False</ShowHeader>
+     <ShowEnableButton>False</ShowEnableButton>
+     <Collapsed>False</Collapsed>
+     <Disabled>False</Disabled>
+     <Button Caption="Button 29" ID="50">
+      <WindowState Visible="True" X="429" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4278190335</BackgroundColor>
+      </Appearance>
+      <Function ID="32"/>
+      <Action>Toggle</Action>
+     </Button>
+     <Button Caption="Button 33" ID="54">
+      <WindowState Visible="True" X="143" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4294940928</BackgroundColor>
+      </Appearance>
+      <Function ID="24"/>
+      <Action>Toggle</Action>
+     </Button>
+     <Button Caption="Button 34" ID="55">
+      <WindowState Visible="True" X="214" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4294967040</BackgroundColor>
+      </Appearance>
+      <Function ID="25"/>
+      <Action>Toggle</Action>
+     </Button>
+     <Button Caption="Button 35" ID="56">
+      <WindowState Visible="True" X="644" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4294967295</BackgroundColor>
+      </Appearance>
+      <Function ID="93"/>
+      <Action>Toggle</Action>
+     </Button>
+     <Button Caption="Button 27" ID="48">
+      <WindowState Visible="True" X="0" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4278190080</BackgroundColor>
+      </Appearance>
+      <Function ID="59"/>
+      <Action>Toggle</Action>
+     </Button>
+     <Button Caption="Button 28" ID="49">
+      <WindowState Visible="True" X="357" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4278255615</BackgroundColor>
+      </Appearance>
+      <Function ID="28"/>
+      <Action>Toggle</Action>
+     </Button>
+     <Button Caption="Button 30" ID="51">
+      <WindowState Visible="True" X="501" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4288217343</BackgroundColor>
+      </Appearance>
+      <Function ID="31"/>
+      <Action>Toggle</Action>
+     </Button>
+     <Button Caption="Button 31" ID="52">
+      <WindowState Visible="True" X="286" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4278255360</BackgroundColor>
+      </Appearance>
+      <Function ID="26"/>
+      <Action>Toggle</Action>
+     </Button>
+     <Button Caption="Button 36" ID="57">
+      <WindowState Visible="True" X="71" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4294901760</BackgroundColor>
+      </Appearance>
+      <Function ID="23"/>
+      <Action>Toggle</Action>
+     </Button>
+     <Button Caption="Button 32" ID="53">
+      <WindowState Visible="True" X="572" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4294902015</BackgroundColor>
+      </Appearance>
+      <Function ID="30"/>
+      <Action>Toggle</Action>
+     </Button>
+    </SoloFrame>
+    <SoloFrame Caption="Solo Frame 1" ID="36">
+     <WindowState Visible="True" X="107" Y="214" Width="787" Height="71"/>
+     <AllowResize>True</AllowResize>
+     <ShowHeader>False</ShowHeader>
+     <ShowEnableButton>False</ShowEnableButton>
+     <Collapsed>False</Collapsed>
+     <Disabled>False</Disabled>
+     <Button Caption="" ID="34">
+      <WindowState Visible="True" X="644" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4294967295</BackgroundColor>
+      </Appearance>
+      <Function ID="99"/>
+      <Action>Toggle</Action>
+     </Button>
+     <Button Caption="" ID="33">
+      <WindowState Visible="True" X="214" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4294967040</BackgroundColor>
+      </Appearance>
+      <Function ID="37"/>
+      <Action>Toggle</Action>
+     </Button>
+     <Button Caption="" ID="29">
+      <WindowState Visible="True" X="501" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4288217343</BackgroundColor>
+      </Appearance>
+      <Function ID="33"/>
+      <Action>Toggle</Action>
+     </Button>
+     <Button Caption="" ID="28">
+      <WindowState Visible="True" X="429" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4278190335</BackgroundColor>
+      </Appearance>
+      <Function ID="34"/>
+      <Action>Toggle</Action>
+     </Button>
+     <Button Caption="" ID="30">
+      <WindowState Visible="True" X="286" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4278255360</BackgroundColor>
+      </Appearance>
+      <Function ID="36"/>
+      <Action>Toggle</Action>
+     </Button>
+     <Button Caption="" ID="27">
+      <WindowState Visible="True" X="357" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4278255615</BackgroundColor>
+      </Appearance>
+      <Function ID="35"/>
+      <Action>Toggle</Action>
+     </Button>
+     <Button Caption="" ID="26">
+      <WindowState Visible="True" X="0" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4278190080</BackgroundColor>
+      </Appearance>
+      <Function ID="58"/>
+      <Action>Toggle</Action>
+     </Button>
+     <Button Caption="" ID="31">
+      <WindowState Visible="True" X="572" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4294902015</BackgroundColor>
+      </Appearance>
+      <Function ID="27"/>
+      <Action>Toggle</Action>
+     </Button>
+     <Button Caption="" ID="32">
+      <WindowState Visible="True" X="143" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4294940928</BackgroundColor>
+      </Appearance>
+      <Function ID="38"/>
+      <Action>Toggle</Action>
+     </Button>
+     <Button Caption="" ID="35">
+      <WindowState Visible="True" X="71" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4294901760</BackgroundColor>
+      </Appearance>
+      <Function ID="39"/>
+      <Action>Toggle</Action>
+     </Button>
+    </SoloFrame>
+    <Label Caption="Washes" ID="59">
+     <WindowState Visible="True" X="0" Y="214" Width="107" Height="71"/>
+    </Label>
+    <Label Caption="Pars" ID="25">
+     <WindowState Visible="True" X="0" Y="143" Width="107" Height="71"/>
+    </Label>
+    <SoloFrame Caption="Solo Frame 1" ID="47">
+     <WindowState Visible="True" X="107" Y="286" Width="787" Height="71"/>
+     <AllowResize>True</AllowResize>
+     <ShowHeader>False</ShowHeader>
+     <ShowEnableButton>False</ShowEnableButton>
+     <Collapsed>False</Collapsed>
+     <Disabled>False</Disabled>
+     <Button Caption="Button 44" ID="43">
+      <WindowState Visible="True" X="143" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4294940928</BackgroundColor>
+      </Appearance>
+      <Function ID="24"/>
+      <Action>Toggle</Action>
+     </Button>
+     <Button Caption="Button 43" ID="42">
+      <WindowState Visible="True" X="572" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4294902015</BackgroundColor>
+      </Appearance>
+      <Function ID="30"/>
+      <Action>Toggle</Action>
+     </Button>
+     <Button Caption="Button 38" ID="37">
+      <WindowState Visible="True" X="0" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4278190080</BackgroundColor>
+      </Appearance>
+      <Function ID="59"/>
+      <Action>Toggle</Action>
+     </Button>
+     <Button Caption="Button 39" ID="38">
+      <WindowState Visible="True" X="357" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4278255615</BackgroundColor>
+      </Appearance>
+      <Function ID="28"/>
+      <Action>Toggle</Action>
+     </Button>
+     <Button Caption="Button 46" ID="45">
+      <WindowState Visible="True" X="644" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4294967295</BackgroundColor>
+      </Appearance>
+      <Function ID="93"/>
+      <Action>Toggle</Action>
+     </Button>
+     <Button Caption="Button 47" ID="46">
+      <WindowState Visible="True" X="71" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4294901760</BackgroundColor>
+      </Appearance>
+      <Function ID="23"/>
+      <Action>Toggle</Action>
+     </Button>
+     <Button Caption="Button 40" ID="39">
+      <WindowState Visible="True" X="429" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4278190335</BackgroundColor>
+      </Appearance>
+      <Function ID="32"/>
+      <Action>Toggle</Action>
+     </Button>
+     <Button Caption="Button 42" ID="41">
+      <WindowState Visible="True" X="286" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4278255360</BackgroundColor>
+      </Appearance>
+      <Function ID="26"/>
+      <Action>Toggle</Action>
+     </Button>
+     <Button Caption="Button 41" ID="40">
+      <WindowState Visible="True" X="501" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4288217343</BackgroundColor>
+      </Appearance>
+      <Function ID="31"/>
+      <Action>Toggle</Action>
+     </Button>
+     <Button Caption="Button 45" ID="44">
+      <WindowState Visible="True" X="214" Y="0" Width="71" Height="71"/>
+      <Appearance>
+       <BackgroundColor>4294967040</BackgroundColor>
+      </Appearance>
+      <Function ID="25"/>
+      <Action>Toggle</Action>
+     </Button>
+    </SoloFrame>
+    <Label Caption="All RGBW" ID="1">
+     <WindowState Visible="True" X="0" Y="53" Width="107" Height="71"/>
+    </Label>
+   </Frame>
   </Frame>
   <Frame Caption="Page 2" ID="1">
    <Appearance>
