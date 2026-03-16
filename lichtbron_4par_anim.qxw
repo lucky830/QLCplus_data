@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Workspace>
+<Workspace xmlns="http://www.qlcplus.org/Workspace" CurrentWindow="FIXANDFUNC">
+ <Creator>
+  <Name>Q Light Controller Plus</Name>
+  <Version>5.2.0</Version>
+  <Author>Lucas Vonk</Author>
+ </Creator>
+ <Engine>
+  <InputOutputMap>
+   <BeatGenerator BeatType="Internal" BPM="120"/>
+   <Universe Name="Universe 1" ID="0">
+    <Output Plugin="ArtNet" UID="10.50.1.38" Line="1"/>
+    <Output Plugin="ArtNet" UID="10.10.1.94" Line="0">
+     <PluginParameters outputIP="10.10.1.100" outputUni="1"/>
+    </Output>
+   </Universe>
+   <Universe Name="Universe 2" ID="1"/>
+   <Universe Name="Universe 3" ID="2"/>
+   <Universe Name="Universe 4" ID="3"/>
+  </InputOutputMap>
+  <Fixture>
+   <Manufacturer>Cosmos</Manufacturer>
+   <Model>FP1812 Flat Par Can</Model>
+   <Mode>10 channels</Mode>
+   <ID>0</ID>
+   <Name>FP1812 Flat Par Can [1]</Name>
+   <Universe>0</Universe>
+   <Address>0</Address>
+   <Channels>10</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>Cosmos</Manufacturer>
+   <Model>FP1812 Flat Par Can</Model>
+   <Mode>10 channels</Mode>
+   <ID>1</ID>
+   <Name>FP1812 Flat Par Can [2]</Name>
+   <Universe>0</Universe>
+   <Address>10</Address>
+   <Channels>10</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>Cosmos</Manufacturer>
+   <Model>FP1812 Flat Par Can</Model>
+   <Mode>10 channels</Mode>
+   <ID>2</ID>
+   <Name>FP1812 Flat Par Can [3]</Name>
+   <Universe>0</Universe>
+   <Address>20</Address>
+   <Channels>10</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>Cosmos</Manufacturer>
+   <Model>FP1812 Flat Par Can</Model>
+   <Mode>10 channels</Mode>
+   <ID>3</ID>
+   <Name>FP1812 Flat Par Can [4]</Name>
+   <Universe>0</Universe>
+   <Address>30</Address>
+   <Channels>10</Channels>
+  </Fixture>
+  <FixtureGroup ID="0">
+   <Name>all</Name>
+   <Size X="4" Y="1"/>
+   <Head X="0" Y="0" Fixture="0">0</Head>
+   <Head X="1" Y="0" Fixture="1">0</Head>
+   <Head X="2" Y="0" Fixture="2">0</Head>
+   <Head X="3" Y="0" Fixture="3">0</Head>
+  </FixtureGroup>
+  <Palette ID="0" Type="Dimmer" Name="100% dimmer" Value="255"/>
+  <Palette ID="1" Type="Dimmer" Name="75% dimmer" Value="191.25"/>
+  <Palette ID="2" Type="Dimmer" Name="50% dimmer" Value="127"/>
+  <Function ID="0" Type="Scene" Name="100% dimmer">
+   <Speed FadeIn="500" FadeOut="500" Duration="0"/>
+   <FixtureGroup ID="0"/>
+   <Palette ID="0"/>
+  </Function>
+  <Function ID="1" Type="Scene" Name="75% dimmer">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureGroup ID="0"/>
+   <Palette ID="1"/>
+  </Function>
+  <Function ID="2" Type="RGBMatrix" Name="left to right">
+   <Speed FadeIn="0" FadeOut="0" Duration="100"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <Algorithm Type="Script">Stripes</Algorithm>
+   <Color Index="0">4294967295</Color>
+   <ControlMode>Dimmer</ControlMode>
+   <FixtureGroup>0</FixtureGroup>
+   <Property Name="orientation" Value="Horizontal"/>
+  </Function>
+  <Function ID="3" Type="Scene" Name="RED">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">0,0,1,255,2,0,3,0,4,0,5,0,6,0,7,5,8,0,9,0</FixtureVal>
+   <FixtureVal ID="1">0,0,1,255,2,0,3,0,4,0,5,0,6,0,7,5,8,0,9,0</FixtureVal>
+   <FixtureVal ID="2">0,0,1,255,2,0,3,0,4,0,5,0,6,0,7,5,8,0,9,0</FixtureVal>
+   <FixtureVal ID="3">0,0,1,255,2,0,3,0,4,0,5,0,6,0,7,5,8,0,9,0</FixtureVal>
+  </Function>
+  <Function ID="4" Type="RGBMatrix" Name="even odd">
+   <Speed FadeIn="0" FadeOut="0" Duration="100"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <Algorithm Type="Script">Even/Odd</Algorithm>
+   <Color Index="0">4294967295</Color>
+   <ControlMode>Dimmer</ControlMode>
+   <FixtureGroup>0</FixtureGroup>
+  </Function>
+  <Function ID="5" Type="Scene" Name="50% dimmer">
+   <Speed FadeIn="500" FadeOut="500" Duration="0"/>
+   <FixtureGroup ID="0"/>
+   <Palette ID="2"/>
+  </Function>
+  <Function ID="6" Type="RGBMatrix" Name="even odd (Copy)">
+   <Speed FadeIn="100" FadeOut="50" Duration="250"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <Algorithm Type="Script">Even/Odd</Algorithm>
+   <Color Index="0">4294967295</Color>
+   <ControlMode>Dimmer</ControlMode>
+   <FixtureGroup>0</FixtureGroup>
+  </Function>
+  <Function ID="7" Type="RGBMatrix" Name="left to right (Copy)">
+   <Speed FadeIn="0" FadeOut="0" Duration="150"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <Algorithm Type="Script">Stripes</Algorithm>
+   <Color Index="0">4294967295</Color>
+   <ControlMode>Dimmer</ControlMode>
+   <FixtureGroup>0</FixtureGroup>
+   <Property Name="orientation" Value="Horizontal"/>
+  </Function>
+  <Monitor DisplayMode="0" ShowLabels="0">
+   <Font>Arial,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1</Font>
+   <ChannelStyle>0</ChannelStyle>
+   <ValueStyle>0</ValueStyle>
+   <Grid Width="2" Height="3" Depth="1" Units="0" POV="1"/>
+   <StageItem>0</StageItem>
+   <FxItem ID="0" XPos="185.375" YPos="1000" ZPos="184.032"/>
+   <FxItem ID="1" XPos="485.375" YPos="1000" ZPos="184.032"/>
+   <FxItem ID="2" XPos="785.375" YPos="1000" ZPos="184.032"/>
+   <FxItem ID="3" XPos="1085.37" YPos="1000" ZPos="184.032"/>
+  </Monitor>
+ </Engine>
+ <VirtualConsole>
+  <Frame Caption="Page 1" ID="0">
+   <Appearance>
+    <Font>Roboto Condensed,16,-1,5,400,0,0,0,0,0,0,0,0,0,0,1</Font>
+   </Appearance>
+   <WindowState Visible="True" X="0" Y="0" Width="1920" Height="1080"/>
+   <AllowResize>False</AllowResize>
+   <ShowHeader>False</ShowHeader>
+   <ShowEnableButton>True</ShowEnableButton>
+   <Collapsed>False</Collapsed>
+   <Disabled>False</Disabled>
+   <SoloFrame Caption="Solo Frame 9" ID="8">
+    <WindowState Visible="True" X="587" Y="451" Width="421" Height="331"/>
+    <AllowResize>True</AllowResize>
+    <ShowHeader>True</ShowHeader>
+    <ShowEnableButton>True</ShowEnableButton>
+    <Collapsed>False</Collapsed>
+    <Disabled>False</Disabled>
+    <Button Caption="50% dimmer" ID="9">
+     <WindowState Visible="True" X="30" Y="256" Width="85" Height="85"/>
+     <Appearance>
+      <BackgroundColor>4282664004</BackgroundColor>
+     </Appearance>
+     <Function ID="5"/>
+     <Action Override="1" ForceLTP="1">Flash</Action>
+     <Key>Space</Key>
+    </Button>
+    <Button Caption="left to right" ID="7">
+     <WindowState Visible="True" X="105" Y="60" Width="85" Height="85"/>
+     <Appearance>
+      <BackgroundColor>4282664004</BackgroundColor>
+     </Appearance>
+     <Function ID="2"/>
+     <Action>Toggle</Action>
+     <Key>K</Key>
+    </Button>
+    <Button Caption="100% dimmer" ID="5">
+     <WindowState Visible="True" X="15" Y="60" Width="85" Height="85"/>
+     <Appearance>
+      <BackgroundColor>4282664004</BackgroundColor>
+     </Appearance>
+     <Function ID="0"/>
+     <Action>Toggle</Action>
+     <Key>J</Key>
+    </Button>
+    <Button Caption="even odd (Copy)" ID="11">
+     <WindowState Visible="True" X="195" Y="150" Width="85" Height="85"/>
+     <Appearance>
+      <BackgroundColor>4282664004</BackgroundColor>
+     </Appearance>
+     <Function ID="6"/>
+     <Action>Toggle</Action>
+     <Key>M</Key>
+    </Button>
+    <Button Caption="left to right (Copy)" ID="12">
+     <WindowState Visible="True" X="105" Y="150" Width="85" Height="85"/>
+     <Appearance>
+      <BackgroundColor>4282664004</BackgroundColor>
+     </Appearance>
+     <Function ID="7"/>
+     <Action>Toggle</Action>
+     <Key>N</Key>
+    </Button>
+    <Button Caption="even odd" ID="10">
+     <WindowState Visible="True" X="195" Y="60" Width="85" Height="85"/>
+     <Appearance>
+      <BackgroundColor>4282664004</BackgroundColor>
+     </Appearance>
+     <Function ID="4"/>
+     <Action>Toggle</Action>
+     <Key>L</Key>
+    </Button>
+   </SoloFrame>
+   <Button Caption="RED" ID="6">
+    <WindowState Visible="True" X="647" Y="316" Width="85" Height="85"/>
+    <Appearance>
+     <BackgroundColor>4282664004</BackgroundColor>
+    </Appearance>
+    <Function ID="3"/>
+    <Action>Toggle</Action>
+   </Button>
+   <Slider Caption="dimmer" ID="4" WidgetStyle="Slider" InvertedAppearance="false">
+    <WindowState Visible="True" X="406" Y="256" Width="75" Height="331"/>
+    <Appearance>
+     <BackgroundColor>4282664004</BackgroundColor>
+    </Appearance>
+    <SliderMode ValueDisplayStyle="Percentage">Adjust</SliderMode>
+    <Level LowLimit="0" HighLimit="255" Value="255">
+     <Channel Fixture="0">0</Channel>
+     <Channel Fixture="1">0</Channel>
+     <Channel Fixture="2">0</Channel>
+     <Channel Fixture="3">0</Channel>
+    </Level>
+    <Adjust Attribute="0" Function="0"/>
+    <Flash/>
+   </Slider>
+   <SpeedDial Caption="Speed 14" ID="13">
+    <WindowState Visible="True" X="210" Y="120" Width="401" Height="250"/>
+    <Visibility>644</Visibility>
+    <Time>0</Time>
+    <AbsoluteValue Minimum="0" Maximum="10000"/>
+   </SpeedDial>
+  </Frame>
+  <Frame Caption="Page 2" ID="1">
+   <Appearance>
+    <Font>Roboto Condensed,16,-1,5,400,0,0,0,0,0,0,0,0,0,0,1</Font>
+   </Appearance>
+   <WindowState Visible="True" X="0" Y="0" Width="1920" Height="1080"/>
+   <AllowResize>False</AllowResize>
+   <ShowHeader>False</ShowHeader>
+   <ShowEnableButton>True</ShowEnableButton>
+   <Collapsed>False</Collapsed>
+   <Disabled>False</Disabled>
+  </Frame>
+  <Frame Caption="Page 3" ID="2">
+   <Appearance>
+    <Font>Roboto Condensed,16,-1,5,400,0,0,0,0,0,0,0,0,0,0,1</Font>
+   </Appearance>
+   <WindowState Visible="True" X="0" Y="0" Width="1920" Height="1080"/>
+   <AllowResize>False</AllowResize>
+   <ShowHeader>False</ShowHeader>
+   <ShowEnableButton>True</ShowEnableButton>
+   <Collapsed>False</Collapsed>
+   <Disabled>False</Disabled>
+  </Frame>
+  <Frame Caption="Page 4" ID="3">
+   <Appearance>
+    <Font>Roboto Condensed,16,-1,5,400,0,0,0,0,0,0,0,0,0,0,1</Font>
+   </Appearance>
+   <WindowState Visible="True" X="0" Y="0" Width="1920" Height="1080"/>
+   <AllowResize>False</AllowResize>
+   <ShowHeader>False</ShowHeader>
+   <ShowEnableButton>True</ShowEnableButton>
+   <Collapsed>False</Collapsed>
+   <Disabled>False</Disabled>
+  </Frame>
+ </VirtualConsole>
+</Workspace>
