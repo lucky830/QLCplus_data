@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Workspace>
+<Workspace xmlns="http://www.qlcplus.org/Workspace" CurrentWindow="SDESK">
+ <Creator>
+  <Name>Q Light Controller Plus</Name>
+  <Version>5.2.1</Version>
+  <Author>Lucas Vonk</Author>
+ </Creator>
+ <Engine>
+  <InputOutputMap>
+   <BeatGenerator BeatType="Internal" BPM="120"/>
+   <NetworkServer Type="Web" AutoStart="True"/>
+   <Universe Name="Universe 1" ID="0">
+    <Output Plugin="ArtNet" UID="192.168.1.56" Line="1">
+     <PluginParameters outputUni="1"/>
+    </Output>
+   </Universe>
+   <Universe Name="Universe 2" ID="1"/>
+   <Universe Name="Universe 3" ID="2"/>
+   <Universe Name="Universe 4" ID="3"/>
+  </InputOutputMap>
+  <Fixture>
+   <Manufacturer>Generic</Manufacturer>
+   <Model>Generic</Model>
+   <Mode>1 Channel</Mode>
+   <ID>0</ID>
+   <Name>Generic Dimmer [1]</Name>
+   <Universe>0</Universe>
+   <Address>0</Address>
+   <Channels>1</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>Generic</Manufacturer>
+   <Model>Generic</Model>
+   <Mode>1 Channel</Mode>
+   <ID>1</ID>
+   <Name>Generic Dimmer [2]</Name>
+   <Universe>0</Universe>
+   <Address>1</Address>
+   <Channels>1</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>Generic</Manufacturer>
+   <Model>Generic</Model>
+   <Mode>1 Channel</Mode>
+   <ID>2</ID>
+   <Name>Generic Dimmer [3]</Name>
+   <Universe>0</Universe>
+   <Address>2</Address>
+   <Channels>1</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>Generic</Manufacturer>
+   <Model>Generic</Model>
+   <Mode>1 Channel</Mode>
+   <ID>3</ID>
+   <Name>Generic Dimmer [4]</Name>
+   <Universe>0</Universe>
+   <Address>3</Address>
+   <Channels>1</Channels>
+  </Fixture>
+  <FixtureGroup ID="0">
+   <Name>New group 1</Name>
+   <Size X="2" Y="1"/>
+   <Head X="0" Y="0" Fixture="1">0</Head>
+   <Head X="1" Y="0" Fixture="2">0</Head>
+  </FixtureGroup>
+  <FixtureGroup ID="1">
+   <Name>New group 2</Name>
+   <Size X="4" Y="1"/>
+   <Head X="0" Y="0" Fixture="3">0</Head>
+   <Head X="1" Y="0" Fixture="1">0</Head>
+   <Head X="2" Y="0" Fixture="2">0</Head>
+   <Head X="3" Y="0" Fixture="0">0</Head>
+  </FixtureGroup>
+  <FixtureGroup ID="2">
+   <Name>New group 3</Name>
+   <Size X="2" Y="1"/>
+   <Head X="0" Y="0" Fixture="1">0</Head>
+   <Head X="1" Y="0" Fixture="0">0</Head>
+  </FixtureGroup>
+  <Function ID="3" Type="Scene" Name="0%">
+   <Speed FadeIn="500" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">0,171</FixtureVal>
+   <FixtureVal ID="2">0,194</FixtureVal>
+   <FixtureVal ID="1">0,0</FixtureVal>
+   <FixtureVal ID="3">0,172</FixtureVal>
+  </Function>
+  <Function ID="4" Type="Scene" Name="50%">
+   <Speed FadeIn="500" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">0,127</FixtureVal>
+  </Function>
+  <Function ID="5" Type="Scene" Name="75%">
+   <Speed FadeIn="500" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">0,191</FixtureVal>
+  </Function>
+  <Function ID="6" Type="Scene" Name="100%">
+   <Speed FadeIn="500" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">0,254</FixtureVal>
+  </Function>
+  <Function ID="7" Type="RGBMatrix" Name="New RGB Matrix 7" BlendMode="Mask">
+   <Speed FadeIn="300" FadeOut="300" Duration="1000"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <Algorithm Type="Script">Stripes</Algorithm>
+   <Color Index="0">4294967295</Color>
+   <ControlMode>Dimmer</ControlMode>
+   <FixtureGroup>1</FixtureGroup>
+   <Property Name="orientation" Value="Horizontal"/>
+  </Function>
+  <Function ID="8" Type="RGBMatrix" Name="tatuu" BlendMode="Mask">
+   <Speed FadeIn="500" FadeOut="600" Duration="1000"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <Algorithm Type="Script">Stripes</Algorithm>
+   <Color Index="0">4294967295</Color>
+   <ControlMode>Dimmer</ControlMode>
+   <FixtureGroup>2</FixtureGroup>
+   <Property Name="orientation" Value="Horizontal"/>
+  </Function>
+  <Monitor DisplayMode="0" ShowLabels="0">
+   <Font>Arial,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1</Font>
+   <ChannelStyle>0</ChannelStyle>
+   <ValueStyle>0</ValueStyle>
+   <Grid Width="4" Height="3" Depth="1" Units="0" POV="1"/>
+   <StageItem>0</StageItem>
+   <FxItem ID="0" XPos="2728.29" YPos="0" ZPos="277.319"/>
+   <FxItem ID="1" XPos="1089.1" YPos="0" ZPos="277.319"/>
+   <FxItem ID="2" XPos="1908.69" YPos="0" ZPos="277.319"/>
+   <FxItem ID="3" XPos="269.511" YPos="0" ZPos="277.319"/>
+  </Monitor>
+ </Engine>
+ <VirtualConsole>
+  <Frame Caption="Pagee" ID="1">
+   <Appearance>
+    <Font>Roboto Condensed,16,-1,5,400,0,0,0,0,0,0,0,0,0,0,1</Font>
+   </Appearance>
+   <WindowState Visible="True" X="0" Y="0" Width="1920" Height="1080"/>
+   <AllowResize>False</AllowResize>
+   <ShowHeader>False</ShowHeader>
+   <ShowEnableButton>True</ShowEnableButton>
+   <Collapsed>False</Collapsed>
+   <Disabled>False</Disabled>
+   <Slider Caption="stoel" ID="18" WidgetStyle="Slider" InvertedAppearance="false">
+    <WindowState Visible="True" X="232" Y="53" Width="178" Height="679"/>
+    <Appearance>
+     <BackgroundColor>4282664004</BackgroundColor>
+    </Appearance>
+    <SliderMode ValueDisplayStyle="Exact" Monitor="true">Level</SliderMode>
+    <Level LowLimit="1" HighLimit="255" Value="0">
+     <Channel Fixture="1">0</Channel>
+    </Level>
+   </Slider>
+   <Frame Caption="Frame 3" ID="2">
+    <WindowState Visible="True" X="71" Y="787" Width="483" Height="232"/>
+    <AllowResize>True</AllowResize>
+    <ShowHeader>False</ShowHeader>
+    <ShowEnableButton>False</ShowEnableButton>
+    <Collapsed>False</Collapsed>
+    <Disabled>False</Disabled>
+    <Button Caption="off" ID="21">
+     <WindowState Visible="True" X="214" Y="53" Width="107" Height="143"/>
+     <Appearance>
+      <BackgroundColor>4282664004</BackgroundColor>
+     </Appearance>
+     <Function ID="4294967295"/>
+     <Action FadeOut="250">StopAll</Action>
+    </Button>
+    <Button Caption="woosh" ID="1">
+     <WindowState Visible="True" X="339" Y="53" Width="107" Height="143"/>
+     <Appearance>
+      <BackgroundColor>4282664004</BackgroundColor>
+     </Appearance>
+     <Function ID="7"/>
+     <Action>Toggle</Action>
+    </Button>
+    <Button Caption="tatuu" ID="20">
+     <WindowState Visible="True" X="17" Y="53" Width="178" Height="143"/>
+     <Appearance>
+      <BackgroundColor>4282664004</BackgroundColor>
+     </Appearance>
+     <Function ID="8"/>
+     <Action>Toggle</Action>
+    </Button>
+   </Frame>
+   <Slider Caption="muur" ID="0" WidgetStyle="Slider" InvertedAppearance="false">
+    <WindowState Visible="True" X="411" Y="53" Width="178" Height="679"/>
+    <Appearance>
+     <BackgroundColor>4282664004</BackgroundColor>
+    </Appearance>
+    <SliderMode ValueDisplayStyle="Percentage" Monitor="true">Level</SliderMode>
+    <Level LowLimit="1" HighLimit="255" Value="0">
+     <Channel Fixture="2">0</Channel>
+    </Level>
+   </Slider>
+   <Slider Caption="kast" ID="17" WidgetStyle="Slider" InvertedAppearance="false">
+    <WindowState Visible="True" X="53" Y="53" Width="178" Height="679"/>
+    <Appearance>
+     <BackgroundColor>4282664004</BackgroundColor>
+    </Appearance>
+    <SliderMode ValueDisplayStyle="Percentage" Monitor="true">Level</SliderMode>
+    <Level LowLimit="1" HighLimit="255" Value="0">
+     <Channel Fixture="0">0</Channel>
+    </Level>
+   </Slider>
+  </Frame>
+ </VirtualConsole>
+</Workspace>
