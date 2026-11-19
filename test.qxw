@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Workspace>
+<Workspace xmlns="http://www.qlcplus.org/Workspace" CurrentWindow="FIXANDFUNC">
+ <Creator>
+  <Name>Q Light Controller Plus</Name>
+  <Version>5.2.2</Version>
+  <Author>Lucas Vonk</Author>
+ </Creator>
+ <Engine>
+  <InputOutputMap>
+   <BeatGenerator BeatType="Internal" BPM="120"/>
+   <NetworkServer Type="Native" AutoStart="False" Name="QLC+_C0A858F5" Password=""/>
+   <Universe Name="Universe 1" ID="0">
+    <Output Plugin="ArtNet" Name="127.0.0.1" UID="" Line="1">
+     <PluginParameters UniverseChannels="50"/>
+    </Output>
+   </Universe>
+   <Universe Name="Universe 2" ID="1"/>
+   <Universe Name="Universe 3" ID="2"/>
+   <Universe Name="Universe 4" ID="3"/>
+  </InputOutputMap>
+  <Fixture>
+   <Manufacturer>Cosmos</Manufacturer>
+   <Model>FP1812 Flat Par Can</Model>
+   <Mode>10 channels</Mode>
+   <ID>0</ID>
+   <Name> [1]</Name>
+   <Universe>0</Universe>
+   <Address>0</Address>
+   <Channels>10</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>Cosmos</Manufacturer>
+   <Model>FP1812 Flat Par Can</Model>
+   <Mode>10 channels</Mode>
+   <ID>1</ID>
+   <Name> [2]</Name>
+   <Universe>0</Universe>
+   <Address>10</Address>
+   <Channels>10</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>Cosmos</Manufacturer>
+   <Model>FP1812 Flat Par Can</Model>
+   <Mode>10 channels</Mode>
+   <ID>2</ID>
+   <Name> [3]</Name>
+   <Universe>0</Universe>
+   <Address>20</Address>
+   <Channels>10</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>Cosmos</Manufacturer>
+   <Model>FP1812 Flat Par Can</Model>
+   <Mode>10 channels</Mode>
+   <ID>3</ID>
+   <Name> [4]</Name>
+   <Universe>0</Universe>
+   <Address>30</Address>
+   <Channels>10</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>beamZ</Manufacturer>
+   <Model>LCB183 v2</Model>
+   <Mode>13 Channels</Mode>
+   <ID>4</ID>
+   <Name>LCB183 v2 [5]</Name>
+   <Universe>0</Universe>
+   <Address>40</Address>
+   <Channels>13</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>beamZ</Manufacturer>
+   <Model>LCB183 v2</Model>
+   <Mode>13 Channels</Mode>
+   <ID>5</ID>
+   <Name>LCB183 v2 [6]</Name>
+   <Universe>0</Universe>
+   <Address>53</Address>
+   <Channels>13</Channels>
+  </Fixture>
+  <FixtureGroup ID="0">
+   <Name>Pars</Name>
+   <Size X="4" Y="1"/>
+   <Head X="0" Y="0" Fixture="0">0</Head>
+   <Head X="1" Y="0" Fixture="1">0</Head>
+   <Head X="2" Y="0" Fixture="2">0</Head>
+   <Head X="3" Y="0" Fixture="3">0</Head>
+  </FixtureGroup>
+  <FixtureGroup ID="1">
+   <Name>LED Bar</Name>
+   <Size X="36" Y="1"/>
+   <Head X="0" Y="0" Fixture="4">0</Head>
+   <Head X="1" Y="0" Fixture="4">1</Head>
+   <Head X="2" Y="0" Fixture="4">2</Head>
+   <Head X="3" Y="0" Fixture="4">3</Head>
+   <Head X="4" Y="0" Fixture="4">4</Head>
+   <Head X="5" Y="0" Fixture="4">5</Head>
+   <Head X="6" Y="0" Fixture="4">6</Head>
+   <Head X="7" Y="0" Fixture="4">7</Head>
+   <Head X="8" Y="0" Fixture="4">8</Head>
+   <Head X="9" Y="0" Fixture="4">9</Head>
+   <Head X="10" Y="0" Fixture="4">10</Head>
+   <Head X="11" Y="0" Fixture="4">11</Head>
+   <Head X="12" Y="0" Fixture="4">12</Head>
+   <Head X="13" Y="0" Fixture="4">13</Head>
+   <Head X="14" Y="0" Fixture="4">14</Head>
+   <Head X="15" Y="0" Fixture="4">15</Head>
+   <Head X="16" Y="0" Fixture="4">16</Head>
+   <Head X="17" Y="0" Fixture="4">17</Head>
+   <Head X="18" Y="0" Fixture="5">0</Head>
+   <Head X="19" Y="0" Fixture="5">1</Head>
+   <Head X="20" Y="0" Fixture="5">2</Head>
+   <Head X="21" Y="0" Fixture="5">3</Head>
+   <Head X="22" Y="0" Fixture="5">4</Head>
+   <Head X="23" Y="0" Fixture="5">5</Head>
+   <Head X="24" Y="0" Fixture="5">6</Head>
+   <Head X="25" Y="0" Fixture="5">7</Head>
+   <Head X="26" Y="0" Fixture="5">8</Head>
+   <Head X="27" Y="0" Fixture="5">9</Head>
+   <Head X="28" Y="0" Fixture="5">10</Head>
+   <Head X="29" Y="0" Fixture="5">11</Head>
+   <Head X="30" Y="0" Fixture="5">12</Head>
+   <Head X="31" Y="0" Fixture="5">13</Head>
+   <Head X="32" Y="0" Fixture="5">14</Head>
+   <Head X="33" Y="0" Fixture="5">15</Head>
+   <Head X="34" Y="0" Fixture="5">16</Head>
+   <Head X="35" Y="0" Fixture="5">17</Head>
+  </FixtureGroup>
+  <Monitor DisplayMode="0" ShowLabels="0">
+   <Font>Arial,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1</Font>
+   <ChannelStyle>0</ChannelStyle>
+   <ValueStyle>0</ValueStyle>
+   <Grid Width="5" Height="1" Depth="3" Units="0" POV="1"/>
+   <StageItem>0</StageItem>
+   <FxItem ID="0" XPos="984.382" YPos="72.137" ZPos="1734.43" XRot="180"/>
+   <FxItem ID="1" XPos="1894.39" YPos="72.137" ZPos="1734.43" XRot="180"/>
+   <FxItem ID="2" XPos="2804.4" YPos="72.137" ZPos="1734.43" XRot="180"/>
+   <FxItem ID="3" XPos="3714.41" YPos="72.137" ZPos="1734.43" XRot="180"/>
+   <FxItem ID="4" XPos="973.536" YPos="72.137" ZPos="934.865"/>
+   <FxItem ID="5" XPos="2890.62" YPos="72.137" ZPos="946.295"/>
+  </Monitor>
+ </Engine>
+ <VirtualConsole>
+  <Frame Caption="Page 1" ID="0">
+   <Appearance>
+    <Font>Roboto Condensed,16,-1,5,400,0,0,0,0,0,0,0,0,0,0,1</Font>
+   </Appearance>
+   <WindowState Visible="True" X="0" Y="0" Width="1920" Height="1080"/>
+   <AllowResize>False</AllowResize>
+   <ShowHeader>False</ShowHeader>
+   <ShowEnableButton>True</ShowEnableButton>
+   <Collapsed>False</Collapsed>
+   <Disabled>False</Disabled>
+  </Frame>
+  <Frame Caption="Page 2" ID="1">
+   <Appearance>
+    <Font>Roboto Condensed,16,-1,5,400,0,0,0,0,0,0,0,0,0,0,1</Font>
+   </Appearance>
+   <WindowState Visible="True" X="0" Y="0" Width="1920" Height="1080"/>
+   <AllowResize>False</AllowResize>
+   <ShowHeader>False</ShowHeader>
+   <ShowEnableButton>True</ShowEnableButton>
+   <Collapsed>False</Collapsed>
+   <Disabled>False</Disabled>
+  </Frame>
+  <Frame Caption="Page 3" ID="2">
+   <Appearance>
+    <Font>Roboto Condensed,16,-1,5,400,0,0,0,0,0,0,0,0,0,0,1</Font>
+   </Appearance>
+   <WindowState Visible="True" X="0" Y="0" Width="1920" Height="1080"/>
+   <AllowResize>False</AllowResize>
+   <ShowHeader>False</ShowHeader>
+   <ShowEnableButton>True</ShowEnableButton>
+   <Collapsed>False</Collapsed>
+   <Disabled>False</Disabled>
+  </Frame>
+  <Frame Caption="Page 4" ID="3">
+   <Appearance>
+    <Font>Roboto Condensed,16,-1,5,400,0,0,0,0,0,0,0,0,0,0,1</Font>
+   </Appearance>
+   <WindowState Visible="True" X="0" Y="0" Width="1920" Height="1080"/>
+   <AllowResize>False</AllowResize>
+   <ShowHeader>False</ShowHeader>
+   <ShowEnableButton>True</ShowEnableButton>
+   <Collapsed>False</Collapsed>
+   <Disabled>False</Disabled>
+  </Frame>
+ </VirtualConsole>
+</Workspace>
